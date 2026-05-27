@@ -26,7 +26,7 @@
 - [Front Panel CLI Plugin](https://github.com/srl-labs/frontpanel-cli-plugin) - View an image of the front panel and port statuses of your switch in the terminal!
 - [SR Linux Conversion Tool](https://github.com/srl-labs/srlconv) - Convert Nokia SR Linux configuration between software versions and compare representations before and after
 - [Custom SNMP Framework](https://learn.srlinux.dev/snmp/snmp_framework/) - Customize and create your own SNMP MIBs in SR Linux
-- [SR Linux Ansible Collections](https://galaxy.ansible.com/ui/repo/published/nokia/srlinux/) - ([Git Repo](https://github.com/nokia/srlinux-ansible-integration))
+- [SR Linux Ansible Collections](https://galaxy.ansible.com/ui/repo/published/nokia/srlinux/) - Ansible Collections for working with SR Linux ([Git Repo](https://github.com/nokia/srlinux-ansible-integration))
 - [SR Linux Discord Community](https://discord.gg/tZvgjQ6PZf) - Discord chat with SR Linux users and devs
 
 
@@ -51,6 +51,7 @@
 	- [Versatile Routing and Services with BGP Volume II](resources/colin-bookham-books/Versatile%20Routing%20and%20Services%20with%20BGP%20Volume%20II%20[Issue%201].pdf) - Excellent deep-dive into SROS BGP services by Colin Bookham
 	- [Implementing Segment Routing with SR-OS](resources/colin-bookham-books/Implementing%20Segment%20Routing%20with%20SR-OS%20[Issue%201.15].pdf) - Excellent deep-dive into SROS Segment Routing by Colin Bookham
 - [SROS Discord Community](https://discord.gg/tZvgjQ6PZf) - Discord chat with SROS users and devs (SROS is a channel within the SR Linux Discord)
+- [SROS Ansible Collections](https://galaxy.ansible.com/ui/repo/published/nokia/sros) - Ansible collections for working with SROS ([Git Repo](https://github.com/nokia/sros-ansible-integration))
 
 
 ## General Networking
