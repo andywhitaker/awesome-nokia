@@ -50,8 +50,8 @@
 - SROS Books
 	- [Versatile Routing and Services with BGP Volume II](resources/colin-bookham-books/Versatile%20Routing%20and%20Services%20with%20BGP%20Volume%20II%20[Issue%201].pdf) - Excellent deep-dive into SROS BGP services by Colin Bookham
 	- [Implementing Segment Routing with SR-OS](resources/colin-bookham-books/Implementing%20Segment%20Routing%20with%20SR-OS%20[Issue%201.15].pdf) - Excellent deep-dive into SROS Segment Routing by Colin Bookham
-- [SROS Discord Community](https://discord.gg/tZvgjQ6PZf) - Discord chat with SROS users and devs (SROS is a channel within the SR Linux Discord)
 - [SROS Ansible Collections](https://galaxy.ansible.com/ui/repo/published/nokia/sros) - Ansible collections for working with SROS ([Git Repo](https://github.com/nokia/sros-ansible-integration))
+- [SROS Discord Community](https://discord.gg/tZvgjQ6PZf) - Discord chat with SROS users and devs (SROS is a channel within the SR Linux Discord)
 
 
 ## General Networking
