@@ -21,6 +21,7 @@
 - [SR Linux Container](https://learn.srlinux.dev) - Virtual SR Linux node for lab use
 - [Pydantic SR Linux](https://github.com/srl-labs/pydantic-srlinux) - Generate [Pydantic validation](https://pydantic.dev/docs/validation/latest/get-started/) models for Nokia SR Linux configuration paths
 - [YANG Browser](https://yangbrowser.nokia.com/srlinux) - Lists all SR Linux model paths (gNMI, JSON, etc...)
+- [Nokia SR Linux and SROS VS Code Language Server](https://marketplace.visualstudio.com/items?itemName=srl-labs.sr-vscode) - VS Code plugin with advanced auto-completion and schema validation for working with text SR Linux and SROS configurations ([Git Repo](https://github.com/srl-labs/vscode-sr))
 - [MultiCLI](https://github.com/srl-labs/MultiCLI) - CLI Plugin for SR Linux emulating common commands and output formatting of other vendor NOSes to ease migration to SR Linux
 - [SR Linux GPT](https://learn.srlinux.dev/blog/2023/sr-linux-gpt/)- SR Linux App integrating OpenAI ChatGPT as an agent into the SR Linux command line
 - [Front Panel CLI Plugin](https://github.com/srl-labs/frontpanel-cli-plugin) - View an image of the front panel and port statuses of your switch in the terminal!
