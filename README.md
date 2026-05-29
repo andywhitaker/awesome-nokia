@@ -3,16 +3,9 @@
 
 > A curated list of awesome Nokia projects and useful resources for working with Nokia network devices.
 
-> [!CAUTION]
-> The README markdown content in this repository is licensed under the [MIT License](LICENSE).
-
-> **Wait! Read this before copying:**
-> The PDF books located in the `resources/colin-bookham-books` directory are **NOT** covered by the MIT license. They are the copyrighted property of their respective authors and are distributed here with explicit permission. You may not modify, sell, or redistribute these books outside the context of this repository without obtaining your own permission from the copyright holders.
-
-
 ## 📦 Containerlab
 - [Containerlab](https://containerlab.dev) - Open-source virtual network lab orchestrator.
-- [Containerlab App](https://github.com/srl-labs/containerlab-app) - GUI for Containerlab available as a Desktop app, self-hosted page, or [Public Web App](https://srl-labs.github.io/containerlab-app/) (topology editing only).
+- [Containerlab App](https://github.com/srl-labs/containerlab-app) - GUI for Containerlab available as a full-featured Desktop app, self-hosted page, or [Public Web App](https://srl-labs.github.io/containerlab-app/) for topology editing only.
 - [VS Code Extension](https://github.com/srl-labs/vscode-containerlab) - Features a GUI topology editor, built-in Wireshark capture, and easy node SSH.
 - [Antimony](https://github.com/antimony-team/antimony) - Alternative GUI and lab manager focused on educational environments.
 - [vrnetlab](https://github.com/srl-labs/vrnetlab) - Tool to convert VM-based network device images into Containerlab-compatible containers.
@@ -20,7 +13,7 @@
 
 ## 🐧 SR Linux
 - [Virtual Container](https://learn.srlinux.dev) - Virtual SR Linux node for lab use.
-- [Pydantic Models](https://github.com/srl-labs/pydantic-srlinux) - Generate [Pydantic validation](https://pydantic.dev/docs/validation/latest/get-started/) models for configuration paths.
+- [Pydantic Models](https://github.com/srl-labs/pydantic-srlinux) - Generate Python [Pydantic validation](https://pydantic.dev/docs/validation/latest/get-started/) models for configuration paths.
 - [YANG Browser](https://yangbrowser.nokia.com/srlinux) - Searchable database of all SR Linux model paths (gNMI, JSON, etc.).
 - [VS Code Language Server](https://marketplace.visualstudio.com/items?itemName=srl-labs.sr-vscode) - Advanced auto-completion and schema validation for configurations ([Git Repo](https://github.com/srl-labs/vscode-sr)).
 - [MultiCLI](https://github.com/srl-labs/MultiCLI) - CLI plugin emulating common commands of other vendor NOSes to ease migration.
@@ -35,9 +28,9 @@
 - [Local Playground](https://github.com/nokia-eda/playground) - Run Nokia EDA locally for free.
 - [CodeSpaces Playground](https://docs.eda.dev/26.4/software-install/non-production/codespaces/) - Run EDA for free on GitHub CodeSpaces compute.
 - [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=eda-labs.vscode-eda) - Interface for reading and writing configuration and state ([Git Repo](https://github.com/eda-labs/vscode-eda)).
-- [Ansible Collections](https://ansible.eda.dev/) - Automation modules for EDA.
-- [Terraform Providers](https://registry.terraform.io/namespaces/nokia-eda) - Infrastructure-as-code integration for EDA.
-- [Pydantic Models](https://github.com/eda-labs/pydantic-eda) - Generate [Pydantic validation](https://pydantic.dev/docs/validation/latest/get-started/) models for EDA custom resources.
+- [Ansible Collections](https://ansible.eda.dev/) - Ansible modules for EDA.
+- [Terraform Providers](https://registry.terraform.io/namespaces/nokia-eda) - Terraform integration for EDA.
+- [Pydantic Models](https://github.com/eda-labs/pydantic-eda) - Generate Python [Pydantic validation](https://pydantic.dev/docs/validation/latest/get-started/) models for EDA custom resources.
 - [TopoBuilder](https://topobuilder.x.eda.dev/) - Web app for creating topologies importable via EDA Network Topology workflow ([Git Repo](https://github.com/eda-labs/topo-builder)).
 - [Discord Community](https://eda.dev/discord) - Official EDA community chat.
 
@@ -60,3 +53,10 @@
 - [gNMIc](https://gnmic.openconfig.net/) - Open-source gNMI client by Nokia.
 - [NETCONF VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Nokia.netconf-client) - NETCONF client for VS Code ([Git Repo](https://github.com/nokia/vscode-netconf)).
 - [Robot Framework](https://robotframework.org/) - Open-source automation framework for test and robotic process automation (RPA).
+
+
+> [!CAUTION]
+> The README markdown content in this repository is licensed under the [MIT License](LICENSE).
+> 
+> **Wait! Read this before copying:**
+> The PDF books located in the `resources/colin-bookham-books` directory are **NOT** covered by the MIT license. They are the copyrighted property of their respective authors and are distributed here with explicit permission. You may not modify, sell, or redistribute these books outside the context of this repository without obtaining your own permission from the copyright holders.
