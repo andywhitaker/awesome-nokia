@@ -3,6 +3,13 @@
 
 > A curated list of awesome Nokia projects and useful resources for working with Nokia network devices.
 
+> [!CAUTION]
+> The README markdown content in this repository is licensed under the [MIT License](LICENSE).
+
+> **Wait! Read this before copying:**
+> The PDF books located in the `resources/colin-bookham-books` directory are **NOT** covered by the MIT license. They are the copyrighted property of their respective authors and are distributed here with explicit permission. You may not modify, sell, or redistribute these books outside the context of this repository without obtaining your own permission from the copyright holders.
+
+
 ## 📦 Containerlab
 - [Containerlab](https://containerlab.dev) - Open-source virtual network lab orchestrator.
 - [Containerlab App](https://github.com/srl-labs/containerlab-app) - GUI for Containerlab available as a Desktop app, self-hosted page, or [Public Web App](https://srl-labs.github.io/containerlab-app/) (topology editing only).
