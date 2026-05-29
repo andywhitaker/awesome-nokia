@@ -58,6 +58,7 @@
 ## General Networking
 - [Network Design Hub](https://documentation.nokia.com/networks-design-hub/index.html) - Nokia Validated Design Guides and Reference Design Guides
 - [AI Network Calculator](https://networkcloudandeverything.com/2-tier-gpu-fabric-calculator/) - AI Network Calculator
+- [ProtoMap](protomap.netdevops.me) - gNMI, gNOI, gNSI and gRIBI service specification visualizer
 
 ## General Automation
 - [gNMIc](https://gnmic.openconfig.net/) - OpenSource gNMI Client by Nokia
