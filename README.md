@@ -9,6 +9,7 @@
 - [Containerlab VS Code](https://github.com/srl-labs/vscode-containerlab) - VS Code Extension featuring a GUI topology editor, built-in Wireshark capture, and easy node SSH.
 - [Antimony](https://github.com/antimony-team/antimony) - Alternative GUI and lab manager focused on educational environments created at the Eastern Switzerland University of Applied Sciences.
 - [vrnetlab](https://github.com/srl-labs/vrnetlab) - Tool to convert VM-based network device images into Containerlab-compatible containers.
+- [Clabernetes](https://github.com/srl-labs/clabernetes/) - Containerlab in kubernetes allowing larger scale-out labs.
 - [Discord Community](https://discord.gg/vAyddtaEV9) - Official Containerlab community chat.
 
 ## 🐧 SR Linux
