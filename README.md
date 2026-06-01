@@ -35,6 +35,13 @@
 - [TopoBuilder](https://topobuilder.x.eda.dev/) - Web app for creating topologies importable via EDA Network Topology workflow ([Git Repo](https://github.com/eda-labs/topo-builder)).
 - [Discord Community](https://eda.dev/discord) - Official EDA community chat.
 
+## 🧩 NSP (Network Services Platform)
+- [Telemetry Pipelines](https://github.com/asadarafat/nokia-nsp-telemetry) - modular, proof-of-concept telemetry pipeline scenarios built around Nokia NSP (Network Services Platform) telemetry
+- [Ansible Collection](https://github.com/nokia/nsp-ansible-integration) - Ansible collection for orchestrating NSP via Restconf APIs.
+- [VSCode Workflow Manager Plugin](https://github.com/nokia/vscode-workflow-manager) - VSCode plugin for managing, creating and writing WFM workflows.
+- [VSCode Intent Manager Plugin](https://github.com/nokia/vscode-intent-manager) - VSCode plugin for managing, creating and writing NSP Intent types.
+- [Automation Examples](https://github.com/nokia/nsp-automation) - curated collection of programmable examples of workflows and intent-types for NSP.
+
 ## 🌐 SROS
 - [SR-SIM Lab Container](https://documentation.nokia.com/sr/26-3/7x50-shared/srsim-installation-setup/getting-started.html) - Virtual SROS node for lab use (requires Nokia Support or Sales portal access).
 - [SR-SIM HW Schema App](https://github.com/FloSch62/srsim-hw-schema) - Generate and validate Containerlab hardware configurations for SR-SIM nodes.
