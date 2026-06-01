@@ -1,21 +1,21 @@
 # Awesome Nokia
 ![Nokia Refreshed Logo](images/nokia-refreshed-logo-2_1.png)
 
-> A curated list of awesome Nokia projects and useful resources for working with Nokia network devices.
+> A curated list of awesome Nokia-related projects and useful resources for working with Nokia network devices.
 
 ## 📦 Containerlab
 - [Containerlab](https://containerlab.dev) - Open-source virtual network lab orchestrator.
 - [Containerlab App](https://github.com/srl-labs/containerlab-app) - GUI for Containerlab available as a full-featured Desktop app, self-hosted page, or [Public Web App](https://srl-labs.github.io/containerlab-app/) for topology editing only.
-- [VS Code Extension](https://github.com/srl-labs/vscode-containerlab) - Features a GUI topology editor, built-in Wireshark capture, and easy node SSH.
+- [Containerlab VS Code](https://github.com/srl-labs/vscode-containerlab) - VS Code Extension featuring a GUI topology editor, built-in Wireshark capture, and easy node SSH.
 - [Antimony](https://github.com/antimony-team/antimony) - Alternative GUI and lab manager focused on educational environments.
 - [vrnetlab](https://github.com/srl-labs/vrnetlab) - Tool to convert VM-based network device images into Containerlab-compatible containers.
 - [Discord Community](https://discord.gg/vAyddtaEV9) - Official Containerlab community chat.
 
 ## 🐧 SR Linux
-- [Virtual Container](https://learn.srlinux.dev) - Virtual SR Linux node for lab use.
+- [SR Linux Lab Container](https://learn.srlinux.dev) - Virtual SR Linux node for lab use.
 - [Pydantic Models](https://github.com/srl-labs/pydantic-srlinux) - Generate Python [Pydantic validation](https://pydantic.dev/docs/validation/latest/get-started/) models for configuration paths.
 - [YANG Browser](https://yangbrowser.nokia.com/srlinux) - Searchable database of all SR Linux model paths (gNMI, JSON, etc.).
-- [VS Code Language Server](https://marketplace.visualstudio.com/items?itemName=srl-labs.sr-vscode) - Advanced auto-completion and schema validation for configurations ([Git Repo](https://github.com/srl-labs/vscode-sr)).
+- [VS Code Language Server](https://marketplace.visualstudio.com/items?itemName=srl-labs.sr-vscode) - Advanced auto-completion and schema validation for SR Linux and SROS configurations ([Git Repo](https://github.com/srl-labs/vscode-sr)).
 - [MultiCLI](https://github.com/srl-labs/MultiCLI) - CLI plugin emulating common commands of other vendor NOSes to ease migration.
 - [SR Linux GPT](https://learn.srlinux.dev/blog/2023/sr-linux-gpt/) - Application integrating OpenAI ChatGPT as an agent into the command line.
 - [Front Panel CLI Plugin](https://github.com/srl-labs/frontpanel-cli-plugin) - Visual representation of switch front panel and port statuses directly in the terminal.
@@ -25,7 +25,7 @@
 - [Discord Community](https://discord.gg/tZvgjQ6PZf) - Official SR Linux and SROS community chat.
 
 ## ☁️ EDA (Event-Driven Automation)
-- [Local Playground](https://github.com/nokia-eda/playground) - Run Nokia EDA locally for free.
+- [Try-EDA Playground](https://github.com/nokia-eda/playground) - Run Nokia EDA locally for free.
 - [CodeSpaces Playground](https://docs.eda.dev/26.4/software-install/non-production/codespaces/) - Run EDA for free on GitHub CodeSpaces compute.
 - [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=eda-labs.vscode-eda) - Interface for reading and writing configuration and state ([Git Repo](https://github.com/eda-labs/vscode-eda)).
 - [Ansible Collections](https://ansible.eda.dev/) - Ansible modules for EDA.
@@ -35,9 +35,9 @@
 - [Discord Community](https://eda.dev/discord) - Official EDA community chat.
 
 ## 🌐 SROS
-- [SR-SIM Container](https://documentation.nokia.com/sr/26-3/7x50-shared/srsim-installation-setup/getting-started.html) - Virtual SROS node for lab use (requires Nokia Support or Sales portal access).
+- [SR-SIM Lab Container](https://documentation.nokia.com/sr/26-3/7x50-shared/srsim-installation-setup/getting-started.html) - Virtual SROS node for lab use (requires Nokia Support or Sales portal access).
 - [SR-SIM HW Schema App](https://github.com/FloSch62/srsim-hw-schema) - Generate and validate Containerlab hardware configurations for SR-SIM nodes.
-- [VS Code Language Server](https://marketplace.visualstudio.com/items?itemName=srl-labs.sr-vscode) - Auto-completion and schema validation for configurations ([Git Repo](https://github.com/srl-labs/vscode-sr)).
+- [VS Code Language Server](https://marketplace.visualstudio.com/items?itemName=srl-labs.sr-vscode) - Auto-completion and schema validation for SROS and SR Linux configurations ([Git Repo](https://github.com/srl-labs/vscode-sr)).
 - [YANG Browser](https://yangbrowser.nokia.com/sros) - Searchable database of all SROS model paths.
 - [pySROS](https://network.developer.nokia.com/static/sr/learn/pysros/latest/introduction.html) - Model-driven Python client libraries.
 - [SROS Books](resources/colin-bookham-books/) - Deep-dives by Colin Bookham:
@@ -50,9 +50,10 @@
 - [Network Design Hub](https://documentation.nokia.com/networks-design-hub/index.html) - Nokia Validated and Reference Design Guides.
 - [AI Network Calculator](https://networkcloudandeverything.com/2-tier-gpu-fabric-calculator/) - 2-tier GPU fabric calculator.
 - [ProtoMap](http://protomap.netdevops.me) - Visualizer for gNMI, gNOI, gNSI, and gRIBI service specifications.
-- [gNMIc](https://gnmic.openconfig.net/) - Open-source gNMI client by Nokia.
+- [gNMIc](https://gnmic.openconfig.net/) - Open source gNMI client by Nokia.
 - [NETCONF VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Nokia.netconf-client) - NETCONF client for VS Code ([Git Repo](https://github.com/nokia/vscode-netconf)).
-- [Robot Framework](https://robotframework.org/) - Open-source automation framework for test and robotic process automation (RPA).
+- [Robot Framework](https://robotframework.org/) - Open source automation framework for test and robotic process automation (RPA) started by Nokia.
+- [Kubenet](https://learn.kubenet.dev/) - Open source community projects using Kubernetes for network automation.
 
 ---
 
