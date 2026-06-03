@@ -5,8 +5,7 @@
 
 ## 📦 Containerlab
 - [Containerlab](https://containerlab.dev) - Open-source virtual network lab orchestrator.
-- [Containerlab App](https://github.com/srl-labs/containerlab-app) - GUI for Containerlab available as a full-featured Desktop app, self-hosted page, or [Public Web App](https://srl-labs.github.io/containerlab-app/) for topology editing only.
-- [Containerlab VS Code](https://github.com/srl-labs/vscode-containerlab) - VS Code Extension featuring a GUI topology editor, built-in Wireshark capture, and easy node SSH.
+- [Containerlab GUI](https://containerlab.dev/manual/gui/) - GUI for Containerlab available as a VS Code extension, desktop app, self-hosted web app, or in a public browser sandbox.
 - [Antimony](https://github.com/antimony-team/antimony) - Alternative GUI and lab manager focused on educational environments created at the Eastern Switzerland University of Applied Sciences.
 - [vrnetlab](https://github.com/srl-labs/vrnetlab) - Tool to convert VM-based network device images into Containerlab-compatible containers.
 - [Clabernetes](https://github.com/srl-labs/clabernetes/) - Containerlab in kubernetes allowing larger scale-out labs.
