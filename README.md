@@ -1,7 +1,7 @@
 # Awesome Nokia
 ![Nokia Refreshed Logo](images/nokia-refreshed-logo-2_1.png)
 
-> A curated list of awesome Nokia-related projects and useful resources for working with Nokia network devices.
+> A curated list of awesome projects and useful resources for working with Nokia network devices.
 
 ## 📦 Containerlab
 - [Containerlab](https://containerlab.dev) - Open-source virtual network lab orchestrator.
@@ -22,6 +22,8 @@
 - [Conversion Tool](https://github.com/srl-labs/srlconv) - Convert configurations between software versions and compare representations.
 - [Custom SNMP Framework](https://learn.srlinux.dev/snmp/snmp_framework/) - Guide for creating custom SNMP MIBs in SR Linux.
 - [Ansible Collections](https://galaxy.ansible.com/ui/repo/published/nokia/srlinux/) - Ansible modules for automation ([Git Repo](https://github.com/nokia/srlinux-ansible-integration)).
+- [Nokia SR Skills](https://github.com/antoinekh/nokia-sr-skills/) - Claude Skill plugin teaching agents how to inspect and operate Nokia SR Linux and SROS models and devices.
+- [SR Linux YANG models](https://github.com/nokia/srlinux-yang-models) - Nokia SR Linux YANG models.
 - [Discord Community](https://discord.gg/tZvgjQ6PZf) - Official SR Linux and SROS community chat.
 
 ## ☁️ EDA (Event-Driven Automation)
@@ -51,6 +53,8 @@
 	- [Versatile Routing and Services with BGP Volume II](resources/colin-bookham-books/Versatile%20Routing%20and%20Services%20with%20BGP%20Volume%20II%20[Issue%201].pdf)
 	- [Implementing Segment Routing with SR-OS](resources/colin-bookham-books/Implementing%20Segment%20Routing%20with%20SR-OS%20[Issue%201.15].pdf)
 - [Ansible Collections](https://galaxy.ansible.com/ui/repo/published/nokia/sros) - Ansible modules for automation ([Git Repo](https://github.com/nokia/sros-ansible-integration)).
+- [Nokia SR Skills](https://github.com/antoinekh/nokia-sr-skills/) - Claude Skill plugin teaching agents how to inspect and operate Nokia SR Linux and SROS models and devices.
+- [SROS YANG Models](https://github.com/nokia/7x50_YangModels) - Nokia SROS YANG models.
 - [Discord Community](https://discord.gg/tZvgjQ6PZf) - SROS community channel within the SR Linux Discord.
 
 ## 🛠️ General Networking & Automation
