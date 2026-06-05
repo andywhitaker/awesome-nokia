@@ -24,6 +24,7 @@
 - [Ansible Collections](https://galaxy.ansible.com/ui/repo/published/nokia/srlinux/) - Ansible modules for automation ([Git Repo](https://github.com/nokia/srlinux-ansible-integration)).
 - [Nokia SR Skills](https://github.com/antoinekh/nokia-sr-skills/) - Claude Skill plugin teaching agents how to inspect and operate Nokia SR Linux and SROS models and devices.
 - [SR Linux YANG models](https://github.com/nokia/srlinux-yang-models) - Nokia SR Linux YANG models.
+- [NAPALM SR Linux](https://github.com/napalm-automation-community/napalm-srlinux) - Community NAPALM driver for SR Linux.
 - [Discord Community](https://discord.gg/tZvgjQ6PZf) - Official SR Linux and SROS community chat.
 
 ## ☁️ EDA (Event-Driven Automation)
@@ -55,6 +56,7 @@
 - [Ansible Collections](https://galaxy.ansible.com/ui/repo/published/nokia/sros) - Ansible modules for automation ([Git Repo](https://github.com/nokia/sros-ansible-integration)).
 - [Nokia SR Skills](https://github.com/antoinekh/nokia-sr-skills/) - Claude Skill plugin teaching agents how to inspect and operate Nokia SR Linux and SROS models and devices.
 - [SROS YANG Models](https://github.com/nokia/7x50_YangModels) - Nokia SROS YANG models.
+- [NAPALM SROS](https://github.com/napalm-automation-community/napalm-sros) - Community NAPALM driver for SROS.
 - [Discord Community](https://discord.gg/tZvgjQ6PZf) - SROS community channel within the SR Linux Discord.
 
 ## 🛠️ General Networking & Automation
@@ -64,6 +66,7 @@
 - [gNMIc](https://gnmic.openconfig.net/) - Open source gNMI client by Nokia.
 - [gNMIc Operator](https://operator.gnmic.dev/) - Deploy and manage gNMIc telemetry collectors on Kubernetes.
 - [NETCONF VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Nokia.netconf-client) - NETCONF client for VS Code ([Git Repo](https://github.com/nokia/vscode-netconf)).
+- [Netlab](https://netlab.tools/) - Multi-Vendor Network labbing software with support for SR Linux and SROS featuring auto-configuration of interfaces and protocols.
 - [Robot Framework](https://robotframework.org/) - Open source automation framework for test and robotic process automation (RPA) started by Nokia.
 - [Kubenet](https://learn.kubenet.dev/) - Open source community projects using Kubernetes for network automation.
 
