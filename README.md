@@ -69,6 +69,7 @@
 - [Netlab](https://netlab.tools/) - Multi-Vendor Network labbing software with support for SR Linux and SROS featuring auto-configuration of interfaces and protocols.
 - [Robot Framework](https://robotframework.org/) - Open source automation framework for test and robotic process automation (RPA) started by Nokia.
 - [Kubenet](https://learn.kubenet.dev/) - Open source community projects using Kubernetes for network automation.
+- [Netmiko](https://github.com/ktbyers/netmiko) - Popular Multivendor Python network automation library with broad vendor support including SR Linux and SROS.
 
 ---
 
