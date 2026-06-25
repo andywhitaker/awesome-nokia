@@ -72,6 +72,9 @@
 - [Scrapli](https://github.com/carlmontanari/scrapli) - Performant and async-capable Python, Go, and Zig network automation library with support for SR Linux and SROS.
 - [Netmiko](https://github.com/ktbyers/netmiko) - Python network automation library with broad vendor support including SR Linux and SROS.
 
+## General Apps & Infrastructure
+- [Kubus](https://flosch62.github.io/Kubus/) - A free, open-source Kubernetes GUI.
+
 ---
 
 > [!CAUTION]
