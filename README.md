@@ -31,10 +31,12 @@
 - [Try-EDA Playground](https://github.com/nokia-eda/playground) - Run Nokia EDA locally for free.
 - [CodeSpaces Playground](https://docs.eda.dev/26.4/software-install/non-production/codespaces/) - Run EDA for free on GitHub CodeSpaces compute.
 - [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=eda-labs.vscode-eda) - Interface for reading and writing configuration and state ([Git Repo](https://github.com/eda-labs/vscode-eda)).
+- [TopoBuilder](https://topobuilder.x.eda.dev/) - Web app for creating topologies importable via EDA Network Topology workflow ([Git Repo](https://github.com/eda-labs/topo-builder)).
+- [EDA Resource Browser](https://eda-resource-browser.pages.dev/) - Visualize, browse, and compare EDA custom resource definitions - Powerful EDA resource browser maintained by the community.
+- [Nokia EDA Resource Browser](https://crd.eda.dev/) - Official EDA resource browser maintained by Nokia.
+- [Pydantic Models](https://github.com/eda-labs/pydantic-eda) - Generate Python [Pydantic validation](https://pydantic.dev/docs/validation/latest/get-started/) models for EDA custom resources.
 - [Ansible Collections](https://ansible.eda.dev/) - Ansible modules for EDA.
 - [Terraform Providers](https://registry.terraform.io/namespaces/nokia-eda) - Terraform integration for EDA.
-- [Pydantic Models](https://github.com/eda-labs/pydantic-eda) - Generate Python [Pydantic validation](https://pydantic.dev/docs/validation/latest/get-started/) models for EDA custom resources.
-- [TopoBuilder](https://topobuilder.x.eda.dev/) - Web app for creating topologies importable via EDA Network Topology workflow ([Git Repo](https://github.com/eda-labs/topo-builder)).
 - [Discord Community](https://eda.dev/discord) - Official EDA community chat.
 
 ## 🧩 NSP (Network Services Platform)
