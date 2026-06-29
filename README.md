@@ -33,6 +33,7 @@
 - [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=eda-labs.vscode-eda) - Interface for reading and writing configuration and state ([Git Repo](https://github.com/eda-labs/vscode-eda)).
 - [TopoBuilder](https://topobuilder.x.eda.dev/) - Web app for creating topologies importable via EDA Network Topology workflow ([Git Repo](https://github.com/eda-labs/topo-builder)).
 - [EDA Resource Browser](https://eda-resource-browser.pages.dev/) - Visualize, browse, and compare EDA custom resource definitions - Powerful EDA resource browser maintained by the community.
+- [EDA Image Manager](https://github.com/kkayhan/edaapp_ImageManager) - Simplify managing node firmware images when using EDA in the lab.
 - [Nokia EDA Resource Browser](https://crd.eda.dev/) - Official EDA resource browser maintained by Nokia.
 - [Pydantic Models](https://github.com/eda-labs/pydantic-eda) - Generate Python [Pydantic validation](https://pydantic.dev/docs/validation/latest/get-started/) models for EDA custom resources.
 - [Ansible Collections](https://ansible.eda.dev/) - Ansible modules for EDA.
