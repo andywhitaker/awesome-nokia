@@ -76,7 +76,8 @@
 - [Netmiko](https://github.com/ktbyers/netmiko) - Python network automation library with broad vendor support including SR Linux and SROS.
 
 ## General Apps & Infrastructure
-- [Kubus](https://flosch62.github.io/Kubus/) - A free, open-source Kubernetes GUI.
+- [Muxus](https://flosch62.github.io/muxus/) - A free, open-source SSH, Telnet and serial client. Split panes, saved workspaces, SFTP, a remote editor, saved tunnels, and images in the terminal.
+- [Kubus](https://kubus-app.dev/) - A free, open-source Kubernetes GUI.
 
 ---
 
