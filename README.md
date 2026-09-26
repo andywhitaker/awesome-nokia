@@ -8,7 +8,7 @@
 - [Containerlab GUI](https://containerlab.dev/manual/gui/) - GUI for Containerlab available as a VS Code extension, desktop app, self-hosted web app, or in a public browser sandbox.
 - [Antimony](https://github.com/antimony-team/antimony) - Alternative GUI and lab manager focused on educational environments created at the Eastern Switzerland University of Applied Sciences.
 - [vrnetlab](https://github.com/srl-labs/vrnetlab) - Tool to convert VM-based network device images into Containerlab-compatible containers.
-- [Clabernetes](https://github.com/srl-labs/clabernetes/) - Containerlab in kubernetes allowing larger scale-out labs.
+- [Clabernetes](https://c9s.run/) - Containerlab in kubernetes allowing larger scale-out labs.
 - [Discord Community](https://discord.gg/vAyddtaEV9) - Official Containerlab community chat.
 
 ## 🐧 SR Linux
