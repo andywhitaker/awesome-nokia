@@ -53,9 +53,7 @@
 - [VS Code Language Server](https://marketplace.visualstudio.com/items?itemName=srl-labs.sr-vscode) - Auto-completion and schema validation for SROS and SR Linux configurations ([Git Repo](https://github.com/srl-labs/vscode-sr)).
 - [YANG Browser](https://yangbrowser.nokia.com/sros) - Searchable database of all SROS model paths.
 - [pySROS](https://network.developer.nokia.com/static/sr/learn/pysros/latest/introduction.html) - Model-driven Python client libraries.
-- [SROS Books](resources/colin-bookham-books/) - Deep-dives by Colin Bookham:
-	- [Versatile Routing and Services with BGP Volume II](resources/colin-bookham-books/Versatile%20Routing%20and%20Services%20with%20BGP%20Volume%20II%20[Issue%201].pdf)
-	- [Implementing Segment Routing with SR-OS](resources/colin-bookham-books/Implementing%20Segment%20Routing%20with%20SR-OS%20[Issue%201.15].pdf)
+- [SROS eBooks](https://github.com/sros-labs/ebooks) - Technical eBooks on SROS and Protocols.
 - [Ansible Collections](https://galaxy.ansible.com/ui/repo/published/nokia/sros) - Ansible modules for automation ([Git Repo](https://github.com/nokia/sros-ansible-integration)).
 - [Nokia SR Skills](https://github.com/antoinekh/nokia-sr-skills/) - Claude Skill plugin teaching agents how to inspect and operate Nokia SR Linux and SROS models and devices.
 - [SROS YANG Models](https://github.com/nokia/7x50_YangModels) - Nokia SROS YANG models.
@@ -78,11 +76,3 @@
 ## General Apps & Infrastructure
 - [Muxus](https://flosch62.github.io/muxus/) - A free, open-source SSH, Telnet and serial client. Split panes, saved workspaces, SFTP, a remote editor, saved tunnels, and images in the terminal.
 - [Kubus](https://kubus-app.dev/) - A free, open-source Kubernetes GUI.
-
----
-
-> [!CAUTION]
-> The README markdown content in this repository is licensed under the [MIT License](LICENSE).
-> 
-> **Wait! Read this before copying:**
-> The PDF books located in the `resources/colin-bookham-books` directory are **NOT** covered by the MIT license. They are the copyrighted property of their respective authors and are distributed here with explicit permission. You may not modify, sell, or redistribute these books outside the context of this repository without obtaining your own permission from the copyright holders.
