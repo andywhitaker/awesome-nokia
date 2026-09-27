@@ -1,32 +1,39 @@
 # Awesome Nokia Web Platform
 
-This directory contains the modern Astro web application for **[Awesome Nokia](https://andywhitaker.github.io/awesome-nokia/)**.
+This directory contains the documentation web platform for **Awesome Nokia**, powered by [Zensical](https://zensical.org).
 
-## 🚀 Quickstart
+## 🚀 Quick Start (Local Development)
 
+You can run the documentation platform locally using [uv](https://docs.astral.sh/uv/):
+
+### Preview Development Server
 ```bash
-# 1. Install dependencies
-npm ci
-
-# 2. Run local development server
-npm run dev
-
-# 3. Typecheck and lint
-npm run check
-
-# 4. Build production static bundle
-npm run build
-
-# 5. Preview production build locally
-npm run preview
+uvx zensical serve
 ```
+By default, the server runs at `http://127.0.0.1:8000` with live reload.
 
-## 🌐 Remote Development
+### Build Static Site
+```bash
+uvx zensical build
+```
+Static production output will be generated in `site/`.
 
-The Astro server is configured in `astro.config.mjs` to bind to `0.0.0.0` with `allowedHosts: true`, enabling seamless remote access across private VPNs, tunnels, and local networks without host header restrictions.
+## 📁 Directory Structure
 
-## 🚢 Continuous Deployment (GitHub Pages)
-
-Whenever changes are pushed to `main` within `website/**`, the GitHub Actions workflow at [`.github/workflows/deploy.yml`](../.github/workflows/deploy.yml) automatically builds and deploys the static files to GitHub Pages at:
-
-**`https://andywhitaker.github.io/awesome-nokia/`**
+```text
+website/
+├── docs/                  # Markdown source files, assets, and styles
+│   ├── index.md           # Landing overview & ecosystem portals
+│   ├── containerlab.md    # Containerlab tools & extensions
+│   ├── srlinux.md         # SR Linux tools & libraries
+│   ├── eda.md             # Event-Driven Automation tools
+│   ├── nsp.md             # Network Services Platform telemetry & tools
+│   ├── sros.md            # SROS tools & libraries
+│   ├── networking.md      # Multi-platform networking tools
+│   ├── apps.md            # Productivity utilities & desktop apps
+│   ├── images/            # Brand logos & icons
+│   ├── javascripts/       # Client-side card search navigation scripts
+│   └── stylesheets/       # Custom theme CSS styling
+├── zensical.toml          # Zensical platform configuration
+└── README.md
+```

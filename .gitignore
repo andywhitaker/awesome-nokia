@@ -1,10 +1,14 @@
-# Build output
+# Build outputs
+site/
+website/site/
 dist/
 website/dist/
 .astro/
 website/.astro/
 
-# Dependencies
+# Caches & dependencies
+.cache/
+website/.cache/
 node_modules/
 website/node_modules/
 
@@ -23,8 +27,12 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 
-# Agent & local workspace documentation
+# AI assistant artifacts & local workspace records
 AGENTS.md
 website/AGENTS.md
 PROJECT_KNOWLEDGE.md
 website/PROJECT_KNOWLEDGE.md
+.agents/
+website/.agents/
+scratch/
+website/scratch/

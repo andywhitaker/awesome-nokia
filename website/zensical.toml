@@ -1,0 +1,97 @@
+[project]
+site_url = "https://andywhitaker.github.io/awesome-nokia/"
+site_name = "Awesome Nokia"
+site_description = "A curated collection of developer tools, network automation libraries, Containerlab extensions, and telemetry pipelines built by Nokia and the global NetDevOps community."
+site_author = "Andy Whitaker & Nokia Community"
+copyright = "Curated by Andy Whitaker and the Nokia Community"
+repo_url = "https://github.com/andywhitaker/awesome-nokia"
+repo_name = "andywhitaker/awesome-nokia"
+
+nav = [
+  { "Overview" = "index.md" },
+  { "Containerlab" = "containerlab.md" },
+  { "SR Linux" = "srlinux.md" },
+  { "EDA" = "eda.md" },
+  { "NSP" = "nsp.md" },
+  { "SROS" = "sros.md" },
+  { "Networking" = "networking.md" },
+  { "Apps" = "apps.md" },
+]
+
+extra_css = ["stylesheets/extra.css"]
+extra_javascript = ["javascripts/extra.js"]
+
+[project.theme]
+language = "en"
+features = [
+  "announce.dismiss",
+  "content.code.annotate",
+  "content.code.copy",
+  "content.code.select",
+  "content.footnote.tooltips",
+  "content.tabs.link",
+  "content.tooltips",
+  "header.autohide",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.path",
+  "navigation.sections",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
+  "navigation.top",
+  "search.highlight",
+  "search.share",
+  "search.suggest",
+  "toc.follow",
+]
+
+logo = "images/nokia-refreshed-logo-2_1.png"
+favicon = "images/nokia-refreshed-logo-2_1.png"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "blue"
+accent = "cyan"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "blue"
+accent = "cyan"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+toc.permalink = false
+pymdownx.arithmatex.generic = true
+pymdownx.betterem = {}
+pymdownx.caret = {}
+pymdownx.details = {}
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.magiclink = {}
+pymdownx.mark = {}
+pymdownx.smartsymbols = {}
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+pymdownx.tabbed.alternate_style = true
+pymdownx.tabbed.combine_header_slug = true
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}
