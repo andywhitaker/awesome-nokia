@@ -68,7 +68,7 @@
 ## 🛠️ General Networking & Automation
 - [Network Design Hub](https://documentation.nokia.com/networks-design-hub/index.html) - Nokia Validated and Reference Design Guides.
 - [AI Network Calculator](https://networkcloudandeverything.com/2-tier-gpu-fabric-calculator/) - 2-tier GPU fabric calculator.
-- [ProtoMap](http://protomap.netdevops.me) - Visualizer for gNMI, gNOI, gNSI, and gRIBI service specifications.
+- [ProtoMap](https://protomap.netdevops.me) - Visualizer for gNMI, gNOI, gNSI, and gRIBI service specifications.
 - [gNMIc](https://gnmic.openconfig.net/) - Open source gNMI client by Nokia.
 - [gNMIc Operator](https://operator.gnmic.dev/) - Deploy and manage gNMIc telemetry collectors on Kubernetes.
 - [NETCONF VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Nokia.netconf-client) - NETCONF client for VS Code ([Git Repo](https://github.com/nokia/vscode-netconf)).

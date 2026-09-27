@@ -9,7 +9,7 @@ description: A curated directory of developer tools, automation libraries, and r
     <span class="pulse-dot"></span>
     <span>60 Curated Resources</span>
   </div>
-  <h1 class="hero-title">Awesome Nokia</h1>
+  <h1 class="hero-title hero-title--full-gradient"><span class="hero-title-awesome">Awesome</span> <span class="hero-title-nokia">Nokia</span></h1>
   <p class="hero-subtitle">
     A curated directory of developer tools, network automation libraries, Containerlab extensions, and telemetry pipelines built by Nokia and the global NetDevOps community.
   </p>

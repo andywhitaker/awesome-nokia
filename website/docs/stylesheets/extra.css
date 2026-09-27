@@ -361,9 +361,107 @@
   z-index: 0;
 }
 
-.md-main {
-  position: relative;
-  z-index: 1;
+@media screen and (min-width: 76.25em) {
+  .md-main {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* ========================================================
+   MOBILE & TABLET NAVIGATION DRAWER FIX (< 1220px)
+   ======================================================== */
+@media screen and (max-width: 76.234375em) {
+  .md-main {
+    position: relative;
+    z-index: auto !important;
+  }
+
+  /* Backdrop Overlay behind drawer */
+  .md-overlay {
+    z-index: 20 !important;
+    background-color: rgba(8, 12, 20, 0.7) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+    backdrop-filter: blur(4px) !important;
+  }
+
+  [data-md-color-scheme="default"] .md-overlay {
+    background-color: rgba(15, 23, 42, 0.45) !important;
+  }
+
+  /* Primary & Secondary Drawers (Navigation & TOC) */
+  .md-sidebar--primary,
+  .md-sidebar--secondary {
+    z-index: 30 !important;
+  }
+
+  [data-md-toggle="drawer"]:checked ~ .md-container .md-sidebar--primary,
+  [data-md-toggle="toc"]:checked ~ .md-container .md-sidebar--secondary {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .md-sidebar--primary {
+    background-color: #ffffff !important;
+    border-right: 1px solid #e2e8f0 !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  [data-md-color-scheme="slate"] .md-sidebar--primary {
+    background-color: #0b101c !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  /* Drawer Navigation Header / Brand */
+  .md-sidebar--primary .md-nav__title {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    padding: 0.75rem 1rem !important;
+  }
+
+  [data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__title {
+    color: #f1f5f9 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+
+  /* Drawer Navigation Item Links */
+  .md-sidebar--primary .md-nav__link {
+    color: #475569 !important;
+    font-weight: 500 !important;
+    font-size: 0.9rem !important;
+    padding: 0.55rem 0.85rem !important;
+    border-radius: 0.375rem !important;
+    transition: all 0.15s ease !important;
+  }
+
+  .md-sidebar--primary .md-nav__link:hover {
+    color: #0044cc !important;
+    background-color: #f1f5f9 !important;
+  }
+
+  .md-sidebar--primary .md-nav__item--active > .md-nav__link {
+    color: #0044cc !important;
+    background-color: #eff6ff !important;
+    font-weight: 600 !important;
+  }
+
+  [data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__link {
+    color: #94a3b8 !important;
+  }
+
+  [data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__link:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.06) !important;
+  }
+
+  [data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__item--active > .md-nav__link {
+    color: #60a5fa !important;
+    background-color: rgba(30, 66, 153, 0.25) !important;
+    font-weight: 600 !important;
+  }
 }
 
 /* ========================================================
@@ -429,7 +527,7 @@
   }
 }
 
-/* Light Mode: Deep, high-contrast Nokia Royal Blue Gradient (does NOT wash out on white) */
+/* Hero Title Container */
 .hero-title {
   display: block !important;
   width: 100% !important;
@@ -440,11 +538,49 @@
   line-height: 1.12 !important;
   margin: 0 0 1.25rem 0 !important;
   padding-bottom: 0.25rem !important;
-  background: linear-gradient(135deg, #002288 0%, #0044cc 55%, #1a68ff 100%) !important;
+}
+
+/* Mode 1: Split Gradient ("Awesome" in royal blue, "Nokia" in blue-to-green gradient) */
+.hero-title:not(.hero-title--full-gradient) .hero-title-awesome {
+  display: inline-block !important;
+  background: linear-gradient(135deg, #002288 0%, #0044cc 60%, #1a68ff 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
   color: transparent !important;
+}
+
+.hero-title:not(.hero-title--full-gradient) .hero-title-nokia {
+  display: inline-block !important;
+  background: linear-gradient(to right, #0044cc 0%, #0294c7 35%, #05a353 70%, #039c32 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* Mode 2: Full Continuous Gradient across the entire "Awesome Nokia" phrase */
+.hero-title--full-gradient {
+  display: inline-block !important;
+  width: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  background: linear-gradient(to right, #0033aa 0%, #004ecc 28%, #0077dd 44%, #0096cc 58%, #00a87a 72%, #00a33b 86%, #039c28 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+.hero-title--full-gradient .hero-title-awesome,
+.hero-title--full-gradient .hero-title-nokia,
+[data-md-color-scheme="slate"] .hero-title--full-gradient .hero-title-awesome,
+[data-md-color-scheme="slate"] .hero-title--full-gradient .hero-title-nokia {
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  -webkit-text-fill-color: inherit !important;
+  background-clip: border-box !important;
+  color: inherit !important;
 }
 
 .subpage-title-text {
@@ -457,10 +593,27 @@
   color: transparent !important;
 }
 
-/* Dark Mode: Vibrant luminous gradient against dark backdrop */
-[data-md-color-scheme="slate"] .hero-title,
+/* Dark Mode: Split Gradient */
+[data-md-color-scheme="slate"] .hero-title:not(.hero-title--full-gradient) .hero-title-awesome,
 [data-md-color-scheme="slate"] .subpage-title-text {
   background: linear-gradient(135deg, #0055ff 0%, #0099ff 50%, #00d4ff 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+[data-md-color-scheme="slate"] .hero-title:not(.hero-title--full-gradient) .hero-title-nokia {
+  background: linear-gradient(to right, #0058e1 0%, #02cffa 35%, #06c45f 70%, #04fd00 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* Dark Mode: Full Continuous Gradient (stays blue longer across "Awesome", shifts through cyan/teal into vibrant Nokia green) */
+[data-md-color-scheme="slate"] .hero-title--full-gradient {
+  background: linear-gradient(to right, #0048ff 0%, #0066ff 28%, #0099ff 44%, #00c0f0 58%, #00d898 72%, #00ea50 86%, #04fd00 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
