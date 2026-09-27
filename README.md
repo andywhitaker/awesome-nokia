@@ -1,7 +1,12 @@
 # Awesome Nokia
 ![Nokia Refreshed Logo](images/nokia-refreshed-logo-2_1.png)
 
+[![Explore Web Catalog](https://img.shields.io/badge/🌐_Explore_Web_Catalog-awesome--nokia-0055ff?style=for-the-badge&logoColor=white)](https://andywhitaker.github.io/awesome-nokia/)
+[![GitHub Pages](https://img.shields.io/github/actions/workflow/status/andywhitaker/awesome-nokia/deploy.yml?branch=main&label=Website%20Deploy&style=for-the-badge)](https://andywhitaker.github.io/awesome-nokia/)
+
 > A curated list of awesome projects and useful resources for working with Nokia network devices.
+>
+> 🌐 **Interactive Web Portal**: Explore the searchable, interactive documentation platform at **[andywhitaker.github.io/awesome-nokia](https://andywhitaker.github.io/awesome-nokia/)**.
 
 ## 📦 Containerlab
 - [Containerlab](https://containerlab.dev) - Open-source virtual network lab orchestrator.

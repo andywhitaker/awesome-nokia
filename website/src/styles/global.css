@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-nokia-obsidian: #080c14;
+  --color-nokia-dark: #080c14;
+  --color-nokia-surface: #0e1526;
+  --color-nokia-surface-elevated: #141c30;
+  --color-nokia-cobalt: #0055ff;
+  --color-nokia-cyan: #00d4ff;
+  --color-nokia-orange: #ff6b00;
+  --color-nokia-emerald: #10b981;
+  --color-nokia-violet: #8b5cf6;
+  --color-nokia-porcelain: #f8fafc;
+  --color-nokia-border-dark: rgba(255, 255, 255, 0.08);
+
+  --font-sans: 'Nokia Pure Text', 'Nokia Pure', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Nokia Pure Headline', 'Nokia Pure', 'Inter', sans-serif;
+  --font-headline: 'Nokia Pure Headline', 'Nokia Pure', 'Inter', sans-serif;
+}
+
+/* Base resets & smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Clean, unobtrusive scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.6);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.7);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(71, 85, 105, 0.8);
+}
+
+/* Hide scrollbar utility */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Remove default webkit search input decoration */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Deep link target highlight pulse animation */
+@keyframes resourcePulse {
+  0% {
+    background-color: rgba(0, 85, 255, 0.22);
+    box-shadow: 0 0 0 3px rgba(0, 85, 255, 0.5);
+  }
+  50% {
+    background-color: rgba(0, 85, 255, 0.1);
+    box-shadow: 0 0 0 4px rgba(0, 85, 255, 0.25);
+  }
+  100% {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.resource-highlight-pulse {
+  animation: resourcePulse 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}

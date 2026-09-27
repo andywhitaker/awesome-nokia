@@ -1,0 +1,24 @@
+{
+  "name": "awesome-nokia-website",
+  "version": "1.0.0",
+  "description": "Awesome Nokia - Curated list of awesome projects and resources for Nokia networking",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check && tsc --noEmit"
+  },
+  "dependencies": {
+    "@lucide/astro": "^1.48.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.5",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@types/node": "^26.6.3"
+  }
+}
