@@ -76,4 +76,4 @@ Select a platform below or use the top navigation tabs to browse curated project
 
 * **Have a project to share?** Open a submission on [GitHub Issues](https://github.com/andywhitaker/awesome-nokia/issues){: target="_blank" rel="noopener noreferrer" }.
 * **GitHub Repository**: Star and follow [andywhitaker/awesome-nokia](https://github.com/andywhitaker/awesome-nokia){: target="_blank" rel="noopener noreferrer" }.
-* **Discord Communities**: Join [Containerlab Discord](https://discord.gg/vAyddtaEV9){: target="_blank" rel="noopener noreferrer" } and [SR Linux Discord](https://discord.gg/tZvgjQ6PZf){: target="_blank" rel="noopener noreferrer" }.
+* **Discord Communities**: Join [Containerlab Discord](https://discord.gg/vAyddtaEV9){: target="_blank" rel="noopener noreferrer" }, [SR Linux Discord](https://discord.gg/tZvgjQ6PZf){: target="_blank" rel="noopener noreferrer" }, and [EDA Discord](https://eda.dev/discord){: target="_blank" rel="noopener noreferrer" }.

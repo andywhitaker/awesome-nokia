@@ -161,7 +161,7 @@
       return;
     }
 
-    var navKeys = ['ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight', 'Enter', 'Escape'];
+    var navKeys = ['ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight', 'Tab', 'Enter', 'Escape'];
     if (navKeys.indexOf(e.key) === -1) return;
 
     var cards = getPageCards();
@@ -174,12 +174,42 @@
     if (e.key === 'Escape') {
       if (activeIdx !== -1) {
         e.preventDefault();
+        if (document.activeElement && typeof document.activeElement.blur === 'function') {
+          document.activeElement.blur();
+        }
         clearActiveCards(cards);
       }
       return;
     }
 
+    if (e.key === 'Tab') {
+      // If a card is active and focus is not yet inside this card, jump focus to the first interactive link inside it
+      if (activeIdx >= 0 && activeIdx < cards.length) {
+        var activeCardForTab = cards[activeIdx];
+        if (!activeCardForTab.contains(document.activeElement)) {
+          var firstLink = activeCardForTab.querySelector('a[href], button');
+          if (firstLink) {
+            e.preventDefault();
+            firstLink.focus();
+            return;
+          }
+        }
+      }
+      // Otherwise allow native tab progression through elements inside the card or across the page
+      return;
+    }
+
     if (e.key === 'Enter') {
+      // If an interactive element (link, button, summary) is focused via Tab, allow native activation
+      var activeEl = document.activeElement;
+      if (activeEl && activeEl !== document.body && activeEl !== document.documentElement) {
+        var tag = activeEl.tagName.toLowerCase();
+        if (tag === 'a' || tag === 'button' || activeEl.getAttribute('role') === 'button' || tag === 'summary') {
+          return;
+        }
+      }
+
+      // If a card is active and no specific inner element is focused, launch the card's primary link
       if (activeIdx >= 0 && activeIdx < cards.length) {
         var card = cards[activeIdx];
         var targetLink = getCardPrimaryLink(card);
@@ -193,6 +223,11 @@
     }
 
     // Directional keys: ArrowDown, ArrowUp, ArrowLeft, ArrowRight
+    // Clear any focused inner element when navigating cards with arrow keys
+    if (document.activeElement && typeof document.activeElement.blur === 'function' && document.activeElement !== document.body) {
+      document.activeElement.blur();
+    }
+
     // When no card is selected, ANY directional arrow key selects cards[0]
     if (activeIdx === -1) {
       e.preventDefault();
@@ -239,6 +274,27 @@
         if (idx !== -1) {
           setActiveCard(cards, idx);
         }
+      }
+    });
+    document.addEventListener('focusin', function (e) {
+      if (isSearchModalOpen()) return;
+      var card = e.target.closest && e.target.closest('.md-typeset .grid.cards > ul > li, .md-typeset .grid.cards > ol > li');
+      var cards = getPageCards();
+      if (!cards || cards.length === 0) return;
+      if (card) {
+        var idx = cards.indexOf(card);
+        if (idx !== -1) {
+          cards.forEach(function (c, i) {
+            if (i === idx) {
+              c.classList.add('card-keyboard-active');
+            } else {
+              c.classList.remove('card-keyboard-active');
+              c.classList.remove('card-target-focus');
+            }
+          });
+        }
+      } else {
+        clearActiveCards(cards);
       }
     });
   }

@@ -155,6 +155,11 @@
   border-bottom: 1px solid #e2e8f0 !important;
 }
 
+.md-tabs__item,
+.md-tabs__item--active {
+  border-bottom: none !important;
+}
+
 .md-tabs__link {
   color: #475569 !important;
   font-weight: 500 !important;
@@ -1042,6 +1047,19 @@ mark[data-md-highlight],
   background-color: #2050cc !important;
   border-color: #2e60dd !important;
   color: #ffffff !important;
+}
+
+/* Accessible Focus Rings on Action Buttons */
+.card-btn:focus-visible,
+.ecosystem-btn:focus-visible {
+  outline: 2px solid #0044cc !important;
+  outline-offset: 2px !important;
+}
+
+[data-md-color-scheme="slate"] .card-btn:focus-visible,
+[data-md-color-scheme="slate"] .ecosystem-btn:focus-visible {
+  outline: 2px solid #38bdf8 !important;
+  outline-offset: 2px !important;
 }
 
 /* General Buttons */
