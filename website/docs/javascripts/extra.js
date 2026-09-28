@@ -1270,6 +1270,15 @@
         '  flex-wrap: wrap !important;',
         '  gap: 4px !important;',
         '  margin-top: 6px !important;',
+        '}',
+        '.card-search-item a {',
+        '  border-left: 3px solid transparent !important;',
+        '  border-radius: 6px !important;',
+        '}',
+        '.card-search-item a.h,',
+        '.card-search-item a:hover {',
+        '  background-color: var(--card-selected-bg, rgba(2, 132, 199, 0.08)) !important;',
+        '  border-left: 3px solid var(--card-selected-border, #0284c7) !important;',
         '}'
       ].join('\n');
       shadow.appendChild(style);
@@ -1317,6 +1326,12 @@
     var tagColor = isDark ? '#7dd3fc' : '#0369a1';
     var tagBorder = isDark ? '1px solid rgba(56,189,248,0.25)' : '1px solid #cbd5e1';
     header.style.color = headerTextColor;
+
+    if (shadow && shadow.host) {
+      shadow.host.style.setProperty('--card-selected-bg', isDark ? 'rgba(56, 189, 248, 0.14)' : 'rgba(2, 132, 199, 0.08)');
+      shadow.host.style.setProperty('--card-selected-border', isDark ? '#38bdf8' : '#0284c7');
+    }
+
     var base = getBaseScope();
 
     if (rawQ === '') {
@@ -1439,19 +1454,29 @@
       if (!input._hasCardSearchListener) {
         input._hasCardSearchListener = true;
 
+        var lastQuery = null;
         var handleQuery = function () {
-          renderView(shadow, input.value);
+          var val = input.value;
+          if (val === lastQuery) return;
+          lastQuery = val;
+          renderView(shadow, val);
         };
 
         input.addEventListener('input', handleQuery);
-        input.addEventListener('keyup', handleQuery);
         input.addEventListener('search', handleQuery);
         input.addEventListener('focus', function () {
-          renderView(shadow, input.value);
+          if (lastQuery === null) {
+            lastQuery = input.value;
+            renderView(shadow, input.value);
+          }
         });
 
         // Keyboard navigation across card search results
-        input.addEventListener('keydown', function (e) {
+        var handleKeyDown = function (e) {
+          if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp' && e.key !== 'Enter' && e.key !== 'Escape') {
+            return;
+          }
+
           var els = getOrInjectSearchElements(shadow);
           if (!els) return;
           var links = Array.from(els.list.querySelectorAll('.card-search-item a'));
@@ -1487,15 +1512,31 @@
           } else if (e.key === 'Enter') {
             e.preventDefault();
             e.stopPropagation();
-            if (links[activeIdx]) {
-              links[activeIdx].click();
+            if (activeIdx >= 0 && links[activeIdx]) {
+              var targetLink = links[activeIdx];
+              var backdrop = shadow.querySelector('.p');
+              if (backdrop) backdrop.click();
+              targetLink.click();
+              if (window.location.href !== targetLink.href) {
+                window.location.href = targetLink.href;
+              }
             }
           } else if (e.key === 'Escape') {
             e.preventDefault();
             var backdrop = shadow.querySelector('.p');
             if (backdrop) backdrop.click();
           }
-        });
+        };
+
+        input.addEventListener('keydown', handleKeyDown);
+
+        if (modalEl) {
+          modalEl.addEventListener('keydown', function (e) {
+            if (e.target !== input) {
+              handleKeyDown(e);
+            }
+          });
+        }
       }
 
       if (modalEl && !modalEl._hasCardSearchObserver) {
@@ -1504,7 +1545,8 @@
           if (!modalEl.classList.contains('d')) {
             // Modal opened
             var curInput = shadow.querySelector('input');
-            renderView(shadow, curInput ? curInput.value : '');
+            lastQuery = curInput ? curInput.value : '';
+            renderView(shadow, lastQuery);
           }
         });
         modalObserver.observe(modalEl, { attributes: true, attributeFilter: ['class'] });
@@ -1518,7 +1560,8 @@
           var hasOurList = z.querySelector('.card-search-list');
           if (!hasOurList) {
             var curInput = shadow.querySelector('input');
-            renderView(shadow, curInput ? curInput.value : '');
+            lastQuery = curInput ? curInput.value : '';
+            renderView(shadow, lastQuery);
           }
         });
         zObserver.observe(z, { childList: true });
