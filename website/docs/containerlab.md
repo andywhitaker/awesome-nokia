@@ -32,19 +32,19 @@ hide:
 
     GUI for Containerlab available as a VS Code extension, desktop app, self-hosted web app, or browser sandbox.
 
-    <span class="card-tag-group">`#gui` `#vscode` `#ui`</span> <span class="card-btn-group">[Visit ↗](https://containerlab.dev/manual/gui/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } </span>
+    <span class="card-tag-group">`#gui` `#vscode` `#ui`</span> <span class="card-btn-group">[Visit ↗](https://containerlab.dev/manual/gui/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/srl-labs/containerlab-app){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
 
--   ### [Antimony](https://github.com/antimony-team/antimony){: target="_blank" rel="noopener noreferrer" } {: #antimony }
+-   ### [Antimony](https://antimony-team.github.io/antimony/){: target="_blank" rel="noopener noreferrer" } {: #antimony }
 
     Alternative GUI and lab manager focused on educational environments created at Eastern Switzerland University of Applied Sciences.
 
-    <span class="card-tag-group">`#gui` `#lab` `#education`</span> <span class="card-btn-group">[Visit ↗](https://github.com/antimony-team/antimony){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/antimony-team/antimony){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#gui` `#lab` `#education`</span> <span class="card-btn-group">[Visit ↗](https://antimony-team.github.io/antimony/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/antimony-team/antimony){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
 
--   ### [vrnetlab](https://github.com/srl-labs/vrnetlab){: target="_blank" rel="noopener noreferrer" } {: #vrnetlab }
+-   ### [vrnetlab](https://containerlab.dev/manual/vrnetlab/){: target="_blank" rel="noopener noreferrer" } {: #vrnetlab }
 
     Tool to convert VM-based network device images into Containerlab-compatible containers.
 
-    <span class="card-tag-group">`#containers` `#lab` `#vm`</span> <span class="card-btn-group">[Visit ↗](https://github.com/srl-labs/vrnetlab){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/srl-labs/vrnetlab){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#containers` `#lab` `#vm`</span> <span class="card-btn-group">[Visit ↗](https://containerlab.dev/manual/vrnetlab/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/srl-labs/vrnetlab){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [Clabernetes](https://c9s.run/){: target="_blank" rel="noopener noreferrer" } {: #clabernetes }
 
@@ -56,7 +56,7 @@ hide:
 
     Official Containerlab community chat server for questions, announcements, and lab discussions.
 
-    <span class="card-tag-group">`#community` `#chat` `#support`</span> <span class="card-btn-group">[Visit ↗](https://discord.gg/vAyddtaEV9){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } </span>
+    <span class="card-tag-group">`#community` `#chat` `#support`</span> <span class="card-btn-group">[Visit ↗](https://discord.gg/vAyddtaEV9){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 </div>
 

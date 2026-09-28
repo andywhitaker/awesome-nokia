@@ -26,13 +26,13 @@ hide:
 
     Virtual SROS (7x50) container node for simulated lab use (requires Nokia Support or Sales portal access).
 
-    <span class="card-tag-group">`#sros` `#lab` `#simulation`</span> <span class="card-btn-group">[Visit ↗](https://documentation.nokia.com/sr/26-3/7x50-shared/srsim-installation-setup/getting-started.html){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } </span>
+    <span class="card-tag-group">`#sros` `#lab` `#simulation`</span> <span class="card-btn-group">[Visit ↗](https://documentation.nokia.com/sr/26-3/7x50-shared/srsim-installation-setup/getting-started.html){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
--   ### [SR-SIM HW Schema App](https://github.com/FloSch62/srsim-hw-schema){: target="_blank" rel="noopener noreferrer" } {: #sros-srsim-hw-schema }
+-   ### [SR-SIM HW Schema App](https://flosch62.github.io/srsim-hw-schema/){: target="_blank" rel="noopener noreferrer" } {: #sros-srsim-hw-schema }
 
     Web utility to generate and validate Containerlab hardware configurations and card slot models for SR-SIM nodes.
 
-    <span class="card-tag-group">`#sros` `#containerlab` `#hardware`</span> <span class="card-btn-group">[Visit ↗](https://github.com/FloSch62/srsim-hw-schema){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/FloSch62/srsim-hw-schema){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#sros` `#containerlab` `#hardware`</span> <span class="card-btn-group">[Visit ↗](https://flosch62.github.io/srsim-hw-schema/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/FloSch62/srsim-hw-schema){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [VS Code Language Server (SROS)](https://marketplace.visualstudio.com/items?itemName=srl-labs.sr-vscode){: target="_blank" rel="noopener noreferrer" } {: #sros-vscode-lsp }
 
@@ -44,7 +44,7 @@ hide:
 
     Interactive searchable database and tree navigator of all Nokia SROS YANG model paths and leaf attributes.
 
-    <span class="card-tag-group">`#yang` `#sros` `#browser`</span> <span class="card-btn-group">[Visit ↗](https://yangbrowser.nokia.com/sros){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } </span>
+    <span class="card-tag-group">`#yang` `#sros` `#browser`</span> <span class="card-btn-group">[Visit ↗](https://yangbrowser.nokia.com/sros){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [pySROS Python Library](https://network.developer.nokia.com/static/sr/learn/pysros/latest/introduction.html){: target="_blank" rel="noopener noreferrer" } {: #sros-pysros }
 
@@ -56,7 +56,7 @@ hide:
 
     Free technical eBooks covering SROS architectures, protocols, advanced routing, and service design.
 
-    <span class="card-tag-group">`#sros` `#books` `#documentation`</span> <span class="card-btn-group">[Visit ↗](https://github.com/sros-labs/ebooks){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/sros-labs/ebooks){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#sros` `#books` `#documentation`</span> <span class="card-btn-group">[Repo ↗](https://github.com/sros-labs/ebooks){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [SROS Ansible Collections](https://galaxy.ansible.com/ui/repo/published/nokia/sros){: target="_blank" rel="noopener noreferrer" } {: #sros-ansible-collections }
 
@@ -68,25 +68,25 @@ hide:
 
     Claude Skill plugin teaching LLM agents how to inspect, query, and operate Nokia SROS & SR Linux devices.
 
-    <span class="card-tag-group">`#ai` `#claude` `#agents`</span> <span class="card-btn-group">[Visit ↗](https://github.com/antoinekh/nokia-sr-skills/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/antoinekh/nokia-sr-skills/){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#ai` `#claude` `#agents`</span> <span class="card-btn-group">[Repo ↗](https://github.com/antoinekh/nokia-sr-skills/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [SROS YANG Models Repository](https://github.com/nokia/7x50_YangModels){: target="_blank" rel="noopener noreferrer" } {: #sros-yang-models }
 
     Complete official repository of all Nokia 7x50 SROS YANG models across major releases.
 
-    <span class="card-tag-group">`#yang` `#sros` `#schema`</span> <span class="card-btn-group">[Visit ↗](https://github.com/nokia/7x50_YangModels){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/nokia/7x50_YangModels){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#yang` `#sros` `#schema`</span> <span class="card-btn-group">[Repo ↗](https://github.com/nokia/7x50_YangModels){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [NAPALM SROS Driver](https://github.com/napalm-automation-community/napalm-sros){: target="_blank" rel="noopener noreferrer" } {: #sros-napalm }
 
     Community NAPALM driver allowing multi-vendor automation scripts to control Nokia SROS nodes.
 
-    <span class="card-tag-group">`#napalm` `#python` `#sros`</span> <span class="card-btn-group">[Visit ↗](https://github.com/napalm-automation-community/napalm-sros){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/napalm-automation-community/napalm-sros){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#napalm` `#python` `#sros`</span> <span class="card-btn-group">[Repo ↗](https://github.com/napalm-automation-community/napalm-sros){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [SROS Community Discord](https://discord.gg/tZvgjQ6PZf){: target="_blank" rel="noopener noreferrer" } {: #sros-discord }
 
     Dedicated SROS channels within the official SR Linux Discord community server.
 
-    <span class="card-tag-group">`#community` `#chat` `#support`</span> <span class="card-btn-group">[Visit ↗](https://discord.gg/tZvgjQ6PZf){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } </span>
+    <span class="card-tag-group">`#community` `#chat` `#support`</span> <span class="card-btn-group">[Visit ↗](https://discord.gg/tZvgjQ6PZf){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 </div>
 

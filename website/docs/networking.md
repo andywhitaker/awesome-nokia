@@ -26,19 +26,19 @@ hide:
 
     Nokia Validated Designs (NVD) and reference architectures for data center, IP/MPLS, and optical networks.
 
-    <span class="card-tag-group">`#design` `#architecture` `#reference`</span> <span class="card-btn-group">[Visit ↗](https://documentation.nokia.com/networks-design-hub/index.html){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } </span>
+    <span class="card-tag-group">`#design` `#architecture` `#reference`</span> <span class="card-btn-group">[Visit ↗](https://documentation.nokia.com/networks-design-hub/index.html){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
--   ### [AI Network Calculator](https://networkcloudandeverything.com/2-tier-gpu-fabric-calculator/){: target="_blank" rel="noopener noreferrer" } {: #gen-ai-network-calculator }
+-   ### [AI Network Calculator](https://fabricforge.app/){: target="_blank" rel="noopener noreferrer" } {: #gen-ai-network-calculator }
 
     Interactive calculator for designing and sizing 2-tier GPU fabrics, rail-optimized networks, and leaf-spine switches.
 
-    <span class="card-tag-group">`#ai` `#calculator` `#gpu`</span> <span class="card-btn-group">[Visit ↗](https://networkcloudandeverything.com/2-tier-gpu-fabric-calculator/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } </span>
+    <span class="card-tag-group">`#ai` `#calculator` `#gpu`</span> <span class="card-btn-group">[Visit ↗](https://fabricforge.app/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [ProtoMap](https://protomap.netdevops.me){: target="_blank" rel="noopener noreferrer" } {: #gen-protomap }
 
     Interactive visualizer for gNMI, gNOI, gNSI, and gRIBI protobuf service specifications and RPC interfaces.
 
-    <span class="card-tag-group">`#gnmi` `#gnoi` `#proto`</span> <span class="card-btn-group">[Visit ↗](https://protomap.netdevops.me){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } </span>
+    <span class="card-tag-group">`#gnmi` `#gnoi` `#proto`</span> <span class="card-btn-group">[Visit ↗](https://protomap.netdevops.me){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [gNMIc](https://gnmic.openconfig.net/){: target="_blank" rel="noopener noreferrer" } {: #gen-gnmic }
 
@@ -50,7 +50,7 @@ hide:
 
     Kubernetes operator to deploy, scale, and manage gNMIc telemetry collector clusters dynamically.
 
-    <span class="card-tag-group">`#kubernetes` `#gnmi` `#operator`</span> <span class="card-btn-group">[Visit ↗](https://operator.gnmic.dev/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/openconfig/gnmic-operator){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#kubernetes` `#gnmi` `#operator`</span> <span class="card-btn-group">[Visit ↗](https://operator.gnmic.dev/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/gnmic/operator){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [NETCONF VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Nokia.netconf-client){: target="_blank" rel="noopener noreferrer" } {: #gen-netconf-vscode }
 
@@ -74,19 +74,19 @@ hide:
 
     Open source community initiatives leveraging Kubernetes primitives and controllers for network automation.
 
-    <span class="card-tag-group">`#kubernetes` `#automation` `#cloud-native`</span> <span class="card-btn-group">[Visit ↗](https://learn.kubenet.dev/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/kubenet-dev){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#kubernetes` `#automation` `#cloud-native`</span> <span class="card-btn-group">[Visit ↗](https://learn.kubenet.dev/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/kubenet-dev/kubenet){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
 
--   ### [Scrapli](https://github.com/carlmontanari/scrapli){: target="_blank" rel="noopener noreferrer" } {: #gen-scrapli }
+-   ### [Scrapli](https://carlmontanari.github.io/scrapli/){: target="_blank" rel="noopener noreferrer" } {: #gen-scrapli }
 
     Fast, async-capable Python/Go network connection and automation library supporting SR Linux and SROS.
 
-    <span class="card-tag-group">`#python` `#async` `#automation`</span> <span class="card-btn-group">[Visit ↗](https://github.com/carlmontanari/scrapli){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/carlmontanari/scrapli){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#python` `#async` `#automation`</span> <span class="card-btn-group">[Visit ↗](https://carlmontanari.github.io/scrapli/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/carlmontanari/scrapli){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
 
--   ### [Netmiko](https://github.com/ktbyers/netmiko){: target="_blank" rel="noopener noreferrer" } {: #gen-netmiko }
+-   ### [Netmiko](https://ktbyers.github.io/netmiko/){: target="_blank" rel="noopener noreferrer" } {: #gen-netmiko }
 
     Multi-vendor Python SSH automation library with first-class support for Nokia SR Linux and SROS devices.
 
-    <span class="card-tag-group">`#python` `#automation` `#ssh`</span> <span class="card-btn-group">[Visit ↗](https://github.com/ktbyers/netmiko){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/ktbyers/netmiko){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#python` `#automation` `#ssh`</span> <span class="card-btn-group">[Visit ↗](https://ktbyers.github.io/netmiko/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/ktbyers/netmiko){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
 
 </div>
 

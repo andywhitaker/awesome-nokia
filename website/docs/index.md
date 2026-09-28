@@ -7,7 +7,7 @@ description: A curated directory of developer tools, automation libraries, and r
 <div class="hero-container">
   <div class="hero-curated-badge">
     <span class="pulse-dot"></span>
-    <span>60 Curated Resources</span>
+    <span>61 Curated Resources</span>
   </div>
   <h1 class="hero-title hero-title--full-gradient"><span class="hero-title-awesome">Awesome</span> <span class="hero-title-nokia">Nokia</span></h1>
   <p class="hero-subtitle">
@@ -39,7 +39,7 @@ Select a platform below or use the top navigation tabs to browse curated project
 
     Event-Driven Automation for data center fabric operations
 
-    <span class="ecosystem-counter">11 Curated Tools</span> [Browse EDA (Event-Driven Automation) →](eda.md){: .md-button .md-button--primary }
+    <span class="ecosystem-counter">12 Curated Tools</span> [Browse EDA (Event-Driven Automation) →](eda.md){: .md-button .md-button--primary }
 
 -   ### [NSP (Network Services Platform)](nsp.md)
 

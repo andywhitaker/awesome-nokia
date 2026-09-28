@@ -10,9 +10,9 @@
 
 ## 📦 Containerlab
 - [Containerlab](https://containerlab.dev) - Open-source virtual network lab orchestrator.
-- [Containerlab GUI](https://containerlab.dev/manual/gui/) - GUI for Containerlab available as a VS Code extension, desktop app, self-hosted web app, or in a public browser sandbox.
-- [Antimony](https://github.com/antimony-team/antimony) - Alternative GUI and lab manager focused on educational environments created at the Eastern Switzerland University of Applied Sciences.
-- [vrnetlab](https://github.com/srl-labs/vrnetlab) - Tool to convert VM-based network device images into Containerlab-compatible containers.
+- [Containerlab GUI](https://containerlab.dev/manual/gui/) - GUI for Containerlab available as a VS Code extension, desktop app, self-hosted web app, or in a public browser sandbox ([Git Repo](https://github.com/srl-labs/containerlab-app)).
+- [Antimony](https://antimony-team.github.io/antimony/) - Alternative GUI and lab manager focused on educational environments created at the Eastern Switzerland University of Applied Sciences ([Git Repo](https://github.com/antimony-team/antimony)).
+- [vrnetlab](https://containerlab.dev/manual/vrnetlab/) - Tool to convert VM-based network device images into Containerlab-compatible containers ([Git Repo](https://github.com/srl-labs/vrnetlab)).
 - [Clabernetes](https://c9s.run/) - Containerlab in kubernetes allowing larger scale-out labs.
 - [Discord Community](https://discord.gg/vAyddtaEV9) - Official Containerlab community chat.
 
@@ -25,36 +25,37 @@
 - [SR Linux GPT](https://learn.srlinux.dev/blog/2023/sr-linux-gpt/) - Application integrating OpenAI ChatGPT as an agent into the command line.
 - [Front Panel CLI Plugin](https://github.com/srl-labs/frontpanel-cli-plugin) - Visual representation of switch front panel and port statuses directly in the terminal.
 - [Conversion Tool](https://github.com/srl-labs/srlconv) - Convert configurations between software versions and compare representations.
-- [Custom SNMP Framework](https://learn.srlinux.dev/snmp/snmp_framework/) - Guide for creating custom SNMP MIBs in SR Linux.
+- [Custom SNMP Framework](https://learn.srlinux.dev/snmp/snmp_framework/) - Guide for creating custom SNMP MIBs in SR Linux ([Git Repo](https://github.com/srl-labs/srl-snmp-framework-lab)).
 - [Ansible Collections](https://galaxy.ansible.com/ui/repo/published/nokia/srlinux/) - Ansible modules for automation ([Git Repo](https://github.com/nokia/srlinux-ansible-integration)).
 - [Nokia SR Skills](https://github.com/antoinekh/nokia-sr-skills/) - Claude Skill plugin teaching agents how to inspect and operate Nokia SR Linux and SROS models and devices.
 - [SR Linux YANG models](https://github.com/nokia/srlinux-yang-models) - Nokia SR Linux YANG models.
-- [NAPALM SR Linux](https://github.com/napalm-automation-community/napalm-srlinux) - Community NAPALM driver for SR Linux.
+- [NAPALM SR Linux](https://napalm.srlinux.dev) - Community NAPALM driver for SR Linux ([Git Repo](https://github.com/napalm-automation-community/napalm-srlinux)).
 - [Discord Community](https://discord.gg/tZvgjQ6PZf) - Official SR Linux and SROS community chat.
 
 ## ☁️ EDA (Event-Driven Automation)
-- [Try-EDA Playground](https://github.com/nokia-eda/playground) - Run Nokia EDA locally for free.
-- [CodeSpaces Playground](https://docs.eda.dev/26.4/software-install/non-production/codespaces/) - Run EDA for free on GitHub CodeSpaces compute.
+- [Nokia EDA](https://eda.dev) - Nokia's event-driven automation network orchestrator.
+- [Try-EDA Playground](https://docs.eda.dev/latest/getting-started/try-eda/) - Run Nokia EDA locally for free ([Git Repo](https://github.com/nokia-eda/playground)).
+- [CodeSpaces Playground](https://docs.eda.dev/latest/software-install/non-production/codespaces/) - Run EDA for free on GitHub CodeSpaces compute.
 - [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=eda-labs.vscode-eda) - Interface for reading and writing configuration and state ([Git Repo](https://github.com/eda-labs/vscode-eda)).
 - [TopoBuilder](https://topobuilder.x.eda.dev/) - Web app for creating topologies importable via EDA Network Topology workflow ([Git Repo](https://github.com/eda-labs/topo-builder)).
-- [EDA Resource Browser](https://eda-resource-browser.pages.dev/) - Visualize, browse, and compare EDA custom resource definitions - Powerful EDA resource browser maintained by the community.
+- [EDA Resource Browser](https://eda-resource-browser.pages.dev/) - Visualize, browse, and compare EDA custom resource definitions - Powerful EDA resource browser maintained by the community ([Git Repo](https://github.com/fullstopdev/resource-browser)).
 - [EDA Image Manager](https://github.com/kkayhan/edaapp_ImageManager) - Simplify managing node firmware images when using EDA in the lab.
-- [Nokia EDA Resource Browser](https://crd.eda.dev/) - Official EDA resource browser maintained by Nokia.
+- [Nokia EDA Resource Browser](https://crd.eda.dev/) - Official EDA resource browser maintained by Nokia ([Git Repo](https://github.com/eda-labs/resource-browser)).
 - [Pydantic Models](https://github.com/eda-labs/pydantic-eda) - Generate Python [Pydantic validation](https://pydantic.dev/docs/validation/latest/get-started/) models for EDA custom resources.
 - [Ansible Collections](https://ansible.eda.dev/) - Ansible modules for EDA.
-- [Terraform Providers](https://registry.terraform.io/namespaces/nokia-eda) - Terraform integration for EDA.
+- [Terraform Providers](https://registry.terraform.io/namespaces/nokia-eda) - Terraform integration for EDA ([Git Repos](https://github.com/nokia-eda?q=terraform&type=all&language=&sort=)).
 - [Discord Community](https://eda.dev/discord) - Official EDA community chat.
 
 ## 🧩 NSP (Network Services Platform)
 - [Telemetry Pipelines](https://github.com/asadarafat/nokia-nsp-telemetry) - modular, proof-of-concept telemetry pipeline scenarios built around Nokia NSP (Network Services Platform) telemetry
-- [Ansible Collection](https://github.com/nokia/nsp-ansible-integration) - Ansible collection for orchestrating NSP via Restconf APIs.
+- [Ansible Collection](https://nokia.github.io/nsp-ansible-integration/) - Ansible collection for orchestrating NSP via Restconf APIs ([Git Repo](https://github.com/nokia/nsp-ansible-integration)).
 - [VSCode Workflow Manager Plugin](https://github.com/nokia/vscode-workflow-manager) - VSCode plugin for managing, creating and writing WFM workflows.
 - [VSCode Intent Manager Plugin](https://github.com/nokia/vscode-intent-manager) - VSCode plugin for managing, creating and writing NSP Intent types.
 - [Automation Examples](https://github.com/nokia/nsp-automation) - curated collection of programmable examples of workflows and intent-types for NSP.
 
 ## 🌐 SROS
 - [SR-SIM Lab Container](https://documentation.nokia.com/sr/26-3/7x50-shared/srsim-installation-setup/getting-started.html) - Virtual SROS node for lab use (requires Nokia Support or Sales portal access).
-- [SR-SIM HW Schema App](https://github.com/FloSch62/srsim-hw-schema) - Generate and validate Containerlab hardware configurations for SR-SIM nodes.
+- [SR-SIM HW Schema App](https://flosch62.github.io/srsim-hw-schema/) - Generate and validate Containerlab hardware configurations for SR-SIM nodes ([Git Repo](https://github.com/FloSch62/srsim-hw-schema)).
 - [VS Code Language Server](https://marketplace.visualstudio.com/items?itemName=srl-labs.sr-vscode) - Auto-completion and schema validation for SROS and SR Linux configurations ([Git Repo](https://github.com/srl-labs/vscode-sr)).
 - [YANG Browser](https://yangbrowser.nokia.com/sros) - Searchable database of all SROS model paths.
 - [pySROS](https://network.developer.nokia.com/static/sr/learn/pysros/latest/introduction.html) - Model-driven Python client libraries.
@@ -67,16 +68,16 @@
 
 ## 🛠️ General Networking & Automation
 - [Network Design Hub](https://documentation.nokia.com/networks-design-hub/index.html) - Nokia Validated and Reference Design Guides.
-- [AI Network Calculator](https://networkcloudandeverything.com/2-tier-gpu-fabric-calculator/) - 2-tier GPU fabric calculator.
+- [AI Network Calculator](https://fabricforge.app/) - 2-tier GPU fabric calculator.
 - [ProtoMap](https://protomap.netdevops.me) - Visualizer for gNMI, gNOI, gNSI, and gRIBI service specifications.
-- [gNMIc](https://gnmic.openconfig.net/) - Open source gNMI client by Nokia.
-- [gNMIc Operator](https://operator.gnmic.dev/) - Deploy and manage gNMIc telemetry collectors on Kubernetes.
+- [gNMIc](https://gnmic.openconfig.net/) - Open source gNMI client by Nokia ([Git Repo](https://github.com/openconfig/gnmic)).
+- [gNMIc Operator](https://operator.gnmic.dev/) - Deploy and manage gNMIc telemetry collectors on Kubernetes ([Git Repo](https://github.com/gnmic/operator)).
 - [NETCONF VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Nokia.netconf-client) - NETCONF client for VS Code ([Git Repo](https://github.com/nokia/vscode-netconf)).
-- [Netlab](https://netlab.tools/) - Multi-Vendor Network labbing software with support for SR Linux and SROS featuring auto-configuration of interfaces and protocols.
-- [Robot Framework](https://robotframework.org/) - Open source automation framework for test and robotic process automation (RPA) started by Nokia.
-- [Kubenet](https://learn.kubenet.dev/) - Open source community projects using Kubernetes for network automation.
-- [Scrapli](https://github.com/carlmontanari/scrapli) - Performant and async-capable Python, Go, and Zig network automation library with support for SR Linux and SROS.
-- [Netmiko](https://github.com/ktbyers/netmiko) - Python network automation library with broad vendor support including SR Linux and SROS.
+- [Netlab](https://netlab.tools/) - Multi-Vendor Network labbing software with support for SR Linux and SROS featuring auto-configuration of interfaces and protocols ([Git Repo](https://github.com/ipspace/netlab)).
+- [Robot Framework](https://robotframework.org/) - Open source automation framework for test and robotic process automation (RPA) started by Nokia ([Git Repo](https://github.com/robotframework/robotframework)).
+- [Kubenet](https://learn.kubenet.dev/) - Open source community projects using Kubernetes for network automation ([Git Repo](https://github.com/kubenet-dev/kubenet)).
+- [Scrapli](https://carlmontanari.github.io/scrapli/) - Performant and async-capable Python, Go, and Zig network automation library with support for SR Linux and SROS ([Git Repo](https://github.com/carlmontanari/scrapli)).
+- [Netmiko](https://ktbyers.github.io/netmiko/) - Python network automation library with broad vendor support including SR Linux and SROS ([Git Repo](https://github.com/ktbyers/netmiko)).
 
 ## General Apps & Infrastructure
 - [Muxus](https://flosch62.github.io/muxus/) - A free, open-source SSH, Telnet and serial client. Split panes, saved workspaces, SFTP, a remote editor, saved tunnels, and images in the terminal.

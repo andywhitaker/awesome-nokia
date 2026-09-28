@@ -32,13 +32,13 @@ hide:
 
     Generate Python Pydantic validation models for SR Linux configuration and telemetry paths.
 
-    <span class="card-tag-group">`#python` `#pydantic` `#validation`</span> <span class="card-btn-group">[Visit ↗](https://github.com/srl-labs/pydantic-srlinux){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/srl-labs/pydantic-srlinux){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#python` `#pydantic` `#validation`</span> <span class="card-btn-group">[Repo ↗](https://github.com/srl-labs/pydantic-srlinux){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [SR Linux YANG Browser](https://yangbrowser.nokia.com/srlinux){: target="_blank" rel="noopener noreferrer" } {: #srl-yang-browser }
 
     Searchable database and interactive schema browser of all SR Linux model paths (gNMI, JSON, etc.).
 
-    <span class="card-tag-group">`#yang` `#browser` `#gnmi`</span> <span class="card-btn-group">[Visit ↗](https://yangbrowser.nokia.com/srlinux){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } </span>
+    <span class="card-tag-group">`#yang` `#browser` `#gnmi`</span> <span class="card-btn-group">[Visit ↗](https://yangbrowser.nokia.com/srlinux){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [VS Code Language Server for SR Linux & SROS](https://marketplace.visualstudio.com/items?itemName=srl-labs.sr-vscode){: target="_blank" rel="noopener noreferrer" } {: #srl-vscode-lsp }
 
@@ -50,31 +50,31 @@ hide:
 
     CLI plugin emulating common commands of other vendor NOSes to ease operator migration to SR Linux.
 
-    <span class="card-tag-group">`#cli` `#migration` `#plugin`</span> <span class="card-btn-group">[Visit ↗](https://github.com/srl-labs/MultiCLI){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/srl-labs/MultiCLI){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#cli` `#migration` `#plugin`</span> <span class="card-btn-group">[Repo ↗](https://github.com/srl-labs/MultiCLI){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [SR Linux GPT](https://learn.srlinux.dev/blog/2023/sr-linux-gpt/){: target="_blank" rel="noopener noreferrer" } {: #srl-gpt }
 
     Application integrating OpenAI ChatGPT as an AI assistant agent directly into the SR Linux command line.
 
-    <span class="card-tag-group">`#ai` `#chatgpt` `#cli`</span> <span class="card-btn-group">[Visit ↗](https://learn.srlinux.dev/blog/2023/sr-linux-gpt/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/srl-labs/srlinux-gpt){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#ai` `#chatgpt` `#cli`</span> <span class="card-btn-group">[Visit ↗](https://learn.srlinux.dev/blog/2023/sr-linux-gpt/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [Front Panel CLI Plugin](https://github.com/srl-labs/frontpanel-cli-plugin){: target="_blank" rel="noopener noreferrer" } {: #srl-frontpanel }
 
     Visual ASCII/graphical representation of switch front panel and port statuses directly in the terminal.
 
-    <span class="card-tag-group">`#cli` `#ui` `#tui`</span> <span class="card-btn-group">[Visit ↗](https://github.com/srl-labs/frontpanel-cli-plugin){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/srl-labs/frontpanel-cli-plugin){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#cli` `#ui` `#tui`</span> <span class="card-btn-group">[Repo ↗](https://github.com/srl-labs/frontpanel-cli-plugin){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [SR Linux Conversion Tool (srlconv)](https://github.com/srl-labs/srlconv){: target="_blank" rel="noopener noreferrer" } {: #srl-conversion-tool }
 
     Convert configurations between software versions and compare syntax representations seamlessly.
 
-    <span class="card-tag-group">`#cli` `#migration` `#conversion`</span> <span class="card-btn-group">[Visit ↗](https://github.com/srl-labs/srlconv){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/srl-labs/srlconv){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#cli` `#migration` `#conversion`</span> <span class="card-btn-group">[Repo ↗](https://github.com/srl-labs/srlconv){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [Custom SNMP Framework](https://learn.srlinux.dev/snmp/snmp_framework/){: target="_blank" rel="noopener noreferrer" } {: #srl-custom-snmp }
 
     Comprehensive guide and developer framework for creating custom SNMP MIBs in SR Linux.
 
-    <span class="card-tag-group">`#snmp` `#monitoring` `#telemetry`</span> <span class="card-btn-group">[Visit ↗](https://learn.srlinux.dev/snmp/snmp_framework/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } </span>
+    <span class="card-tag-group">`#snmp` `#monitoring` `#telemetry`</span> <span class="card-btn-group">[Visit ↗](https://learn.srlinux.dev/snmp/snmp_framework/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/srl-labs/srl-snmp-framework-lab){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [SR Linux Ansible Collections](https://galaxy.ansible.com/ui/repo/published/nokia/srlinux/){: target="_blank" rel="noopener noreferrer" } {: #srl-ansible-collections }
 
@@ -86,25 +86,25 @@ hide:
 
     Claude Skill plugin teaching LLM agents how to inspect and operate Nokia SR Linux and SROS devices.
 
-    <span class="card-tag-group">`#ai` `#claude` `#agents`</span> <span class="card-btn-group">[Visit ↗](https://github.com/antoinekh/nokia-sr-skills/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/antoinekh/nokia-sr-skills/){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#ai` `#claude` `#agents`</span> <span class="card-btn-group">[Repo ↗](https://github.com/antoinekh/nokia-sr-skills/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [SR Linux YANG Models](https://github.com/nokia/srlinux-yang-models){: target="_blank" rel="noopener noreferrer" } {: #srl-yang-models }
 
     Public repository of all standard and vendor-augmented Nokia SR Linux YANG models.
 
-    <span class="card-tag-group">`#yang` `#schema` `#official`</span> <span class="card-btn-group">[Visit ↗](https://github.com/nokia/srlinux-yang-models){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/nokia/srlinux-yang-models){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#yang` `#schema` `#official`</span> <span class="card-btn-group">[Repo ↗](https://github.com/nokia/srlinux-yang-models){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
--   ### [NAPALM SR Linux](https://github.com/napalm-automation-community/napalm-srlinux){: target="_blank" rel="noopener noreferrer" } {: #srl-napalm }
+-   ### [NAPALM SR Linux](https://napalm.srlinux.dev){: target="_blank" rel="noopener noreferrer" } {: #srl-napalm }
 
     Community-maintained NAPALM network automation driver for SR Linux devices.
 
-    <span class="card-tag-group">`#napalm` `#python` `#automation`</span> <span class="card-btn-group">[Visit ↗](https://github.com/napalm-automation-community/napalm-srlinux){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/napalm-automation-community/napalm-srlinux){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+    <span class="card-tag-group">`#napalm` `#python` `#automation`</span> <span class="card-btn-group">[Visit ↗](https://napalm.srlinux.dev){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/napalm-automation-community/napalm-srlinux){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [SR Linux Discord Community](https://discord.gg/tZvgjQ6PZf){: target="_blank" rel="noopener noreferrer" } {: #srl-discord }
 
     Official community chat for SR Linux and SROS network engineers, developers, and architects.
 
-    <span class="card-tag-group">`#community` `#chat` `#support`</span> <span class="card-btn-group">[Visit ↗](https://discord.gg/tZvgjQ6PZf){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } </span>
+    <span class="card-tag-group">`#community` `#chat` `#support`</span> <span class="card-btn-group">[Visit ↗](https://discord.gg/tZvgjQ6PZf){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 </div>
 
