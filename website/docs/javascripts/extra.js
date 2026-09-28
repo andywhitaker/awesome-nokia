@@ -86,9 +86,7 @@
       "#containers",
       "#cli",
       "#official"
-    ],
-    "stars": "2,841",
-    "badge": "Popular"
+    ]
   },
   {
     "id": "clab-gui",
@@ -102,8 +100,7 @@
       "#ui",
       "#lab",
       "#official"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "antimony",
@@ -116,9 +113,7 @@
       "#lab",
       "#education",
       "#community"
-    ],
-    "stars": "57",
-    "badge": "Community"
+    ]
   },
   {
     "id": "vrnetlab",
@@ -131,9 +126,7 @@
       "#lab",
       "#vm",
       "#official"
-    ],
-    "stars": "287",
-    "badge": "Official"
+    ]
   },
   {
     "id": "clabernetes",
@@ -147,9 +140,7 @@
       "#lab",
       "#scale",
       "#official"
-    ],
-    "stars": "135",
-    "badge": "Official"
+    ]
   },
   {
     "id": "clab-wsl",
@@ -163,8 +154,7 @@
       "#windows",
       "#lab",
       "#official"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "clab-discord",
@@ -176,8 +166,7 @@
       "#community",
       "#chat",
       "#support"
-    ],
-    "badge": "Community"
+    ]
   },
   {
     "id": "srl-lab-container",
@@ -190,9 +179,7 @@
       "#srlinux",
       "#containers",
       "#official"
-    ],
-    "stars": "101",
-    "badge": "Official"
+    ]
   },
   {
     "id": "srl-pydantic",
@@ -205,8 +192,7 @@
       "#pydantic",
       "#validation",
       "#automation"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "srl-yang-browser",
@@ -220,8 +206,7 @@
       "#gnmi",
       "#tooling",
       "#official"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "srl-vscode-lsp",
@@ -236,8 +221,7 @@
       "#ide",
       "#srlinux",
       "#sros"
-    ],
-    "badge": "Popular"
+    ]
   },
   {
     "id": "srl-multicli",
@@ -250,8 +234,7 @@
       "#migration",
       "#plugin",
       "#nos"
-    ],
-    "badge": "Community"
+    ]
   },
   {
     "id": "srl-gpt",
@@ -264,8 +247,7 @@
       "#chatgpt",
       "#cli",
       "#llm"
-    ],
-    "badge": "Popular"
+    ]
   },
   {
     "id": "srl-frontpanel",
@@ -278,8 +260,7 @@
       "#ui",
       "#tui",
       "#hardware"
-    ],
-    "badge": "Popular"
+    ]
   },
   {
     "id": "srl-conversion-tool",
@@ -292,8 +273,7 @@
       "#migration",
       "#conversion",
       "#config"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "srl-custom-snmp",
@@ -306,8 +286,7 @@
       "#monitoring",
       "#telemetry",
       "#guide"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "srl-ansible-collections",
@@ -320,8 +299,7 @@
       "#automation",
       "#devops",
       "#official"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "srl-skills",
@@ -336,8 +314,7 @@
       "#automation",
       "#srlinux",
       "#sros"
-    ],
-    "badge": "Community"
+    ]
   },
   {
     "id": "srl-yang-models",
@@ -349,8 +326,7 @@
       "#yang",
       "#schema",
       "#official"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "srl-napalm",
@@ -363,8 +339,7 @@
       "#python",
       "#automation",
       "#community"
-    ],
-    "badge": "Community"
+    ]
   },
   {
     "id": "srl-ndk",
@@ -378,8 +353,7 @@
       "#srlinux",
       "#development",
       "#official"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "srl-fcli",
@@ -393,8 +367,7 @@
       "#srlinux",
       "#mcp",
       "#cli"
-    ],
-    "badge": "Community"
+    ]
   },
   {
     "id": "srl-discord",
@@ -406,8 +379,7 @@
       "#community",
       "#chat",
       "#support"
-    ],
-    "badge": "Community"
+    ]
   },
   {
     "id": "eda-core",
@@ -420,8 +392,7 @@
       "#automation",
       "#orchestration",
       "#official"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "eda-playground",
@@ -435,8 +406,7 @@
       "#playground",
       "#k8s",
       "#official"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "eda-codespaces",
@@ -450,8 +420,7 @@
       "#cloud",
       "#playground",
       "#official"
-    ],
-    "badge": "Popular"
+    ]
   },
   {
     "id": "eda-vscode-extension",
@@ -465,8 +434,7 @@
       "#ide",
       "#extension",
       "#official"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "eda-topobuilder",
@@ -479,8 +447,7 @@
       "#topology",
       "#ui",
       "#tooling"
-    ],
-    "badge": "Popular"
+    ]
   },
   {
     "id": "eda-resource-browser-community",
@@ -494,8 +461,7 @@
       "#browser",
       "#ui",
       "#community"
-    ],
-    "badge": "Community"
+    ]
   },
   {
     "id": "eda-image-manager",
@@ -509,8 +475,7 @@
       "#firmware",
       "#lab",
       "#community"
-    ],
-    "badge": "Community"
+    ]
   },
   {
     "id": "eda-resource-browser-official",
@@ -523,8 +488,7 @@
       "#crd",
       "#browser",
       "#official"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "eda-pydantic",
@@ -537,8 +501,7 @@
       "#python",
       "#eda",
       "#validation"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "eda-ansible-collections",
@@ -551,8 +514,7 @@
       "#eda",
       "#automation",
       "#devops"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "eda-terraform",
@@ -565,8 +527,7 @@
       "#iac",
       "#eda",
       "#cloud"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "eda-discord",
@@ -578,8 +539,7 @@
       "#community",
       "#chat",
       "#support"
-    ],
-    "badge": "Community"
+    ]
   },
   {
     "id": "nsp-telemetry-pipelines",
@@ -593,8 +553,7 @@
       "#kafka",
       "#pipelines",
       "#monitoring"
-    ],
-    "badge": "Community"
+    ]
   },
   {
     "id": "nsp-ansible-collection",
@@ -607,8 +566,7 @@
       "#ansible",
       "#restconf",
       "#automation"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "nsp-vscode-wfm",
@@ -621,8 +579,7 @@
       "#vscode",
       "#workflows",
       "#ide"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "nsp-vscode-intent",
@@ -635,8 +592,7 @@
       "#vscode",
       "#intents",
       "#ide"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "nsp-automation-examples",
@@ -650,8 +606,7 @@
       "#examples",
       "#workflows",
       "#intents"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "sros-srsim-container",
@@ -665,8 +620,7 @@
       "#simulation",
       "#containers",
       "#official"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "sros-srsim-hw-schema",
@@ -680,8 +634,7 @@
       "#hardware",
       "#schema",
       "#community"
-    ],
-    "badge": "Community"
+    ]
   },
   {
     "id": "sros-vscode-lsp",
@@ -695,8 +648,7 @@
       "#sros",
       "#srlinux",
       "#ide"
-    ],
-    "badge": "Popular"
+    ]
   },
   {
     "id": "sros-yang-browser",
@@ -709,8 +661,7 @@
       "#sros",
       "#browser",
       "#official"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "sros-pysros",
@@ -724,9 +675,7 @@
       "#api",
       "#automation",
       "#official"
-    ],
-    "stars": "57",
-    "badge": "Official"
+    ]
   },
   {
     "id": "sros-ebooks",
@@ -739,8 +688,7 @@
       "#books",
       "#documentation",
       "#learning"
-    ],
-    "badge": "Popular"
+    ]
   },
   {
     "id": "sros-ansible-collections",
@@ -753,8 +701,7 @@
       "#sros",
       "#automation",
       "#devops"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "sros-skills",
@@ -768,8 +715,7 @@
       "#agents",
       "#sros",
       "#srlinux"
-    ],
-    "badge": "Community"
+    ]
   },
   {
     "id": "sros-yang-models",
@@ -782,9 +728,7 @@
       "#sros",
       "#schema",
       "#official"
-    ],
-    "stars": "77",
-    "badge": "Official"
+    ]
   },
   {
     "id": "sros-napalm",
@@ -798,8 +742,7 @@
       "#sros",
       "#automation",
       "#community"
-    ],
-    "badge": "Community"
+    ]
   },
   {
     "id": "sros-discord",
@@ -811,8 +754,7 @@
       "#community",
       "#chat",
       "#support"
-    ],
-    "badge": "Community"
+    ]
   },
   {
     "id": "gen-network-design-hub",
@@ -825,8 +767,7 @@
       "#architecture",
       "#reference",
       "#official"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "gen-ai-network-calculator",
@@ -840,8 +781,7 @@
       "#gpu",
       "#datacenter",
       "#fabric"
-    ],
-    "badge": "Popular"
+    ]
   },
   {
     "id": "gen-protomap",
@@ -855,8 +795,7 @@
       "#proto",
       "#visualizer",
       "#telemetry"
-    ],
-    "badge": "Community"
+    ]
   },
   {
     "id": "gen-gnmic",
@@ -870,9 +809,7 @@
       "#cli",
       "#collector",
       "#official"
-    ],
-    "stars": "322",
-    "badge": "Popular"
+    ]
   },
   {
     "id": "gen-gnmic-operator",
@@ -886,8 +823,7 @@
       "#operator",
       "#telemetry",
       "#official"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "gen-raven",
@@ -901,8 +837,7 @@
       "#rpki",
       "#bmp",
       "#official"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "gen-netconf-vscode",
@@ -916,8 +851,7 @@
       "#ide",
       "#extension",
       "#official"
-    ],
-    "badge": "Official"
+    ]
   },
   {
     "id": "gen-netlab",
@@ -931,9 +865,7 @@
       "#automation",
       "#python",
       "#community"
-    ],
-    "stars": "746",
-    "badge": "Popular"
+    ]
   },
   {
     "id": "gen-robot-framework",
@@ -947,9 +879,7 @@
       "#robot-framework",
       "#python",
       "#official"
-    ],
-    "stars": "11,916",
-    "badge": "Popular"
+    ]
   },
   {
     "id": "gen-kubenet",
@@ -962,8 +892,7 @@
       "#automation",
       "#cloud-native",
       "#community"
-    ],
-    "badge": "Community"
+    ]
   },
   {
     "id": "gen-scrapli",
@@ -977,8 +906,7 @@
       "#automation",
       "#ssh",
       "#community"
-    ],
-    "badge": "Popular"
+    ]
   },
   {
     "id": "gen-netmiko",
@@ -992,9 +920,7 @@
       "#ssh",
       "#multivendor",
       "#community"
-    ],
-    "stars": "4,295",
-    "badge": "Popular"
+    ]
   },
   {
     "id": "gen-app-muxus",
@@ -1008,9 +934,7 @@
       "#workspace",
       "#gui",
       "#community"
-    ],
-    "stars": "43",
-    "badge": "Community"
+    ]
   },
   {
     "id": "gen-app-kubus",
@@ -1023,40 +947,15 @@
       "#gui",
       "#devops",
       "#community"
-    ],
-    "badge": "Community"
+    ]
   }
 ];
 
-  // Top 12 official & community projects ranked by GitHub stars
-  var POPULAR_PROJECTS = [
-  {
-    "title": "Robot Framework",
-    "cat": "General Networking",
-    "stars": "11,916",
-    "href": "networking/#gen-robot-framework",
-    "desc": "Generic open source automation framework for acceptance testing and test-driven development.",
-    "tags": [
-      "#testing",
-      "#automation"
-    ]
-  },
-  {
-    "title": "Netmiko",
-    "cat": "General Networking",
-    "stars": "4,295",
-    "href": "networking/#gen-netmiko",
-    "desc": "Multi-vendor Python library to simplify CLI connections to network devices via SSH.",
-    "tags": [
-      "#python",
-      "#ssh",
-      "#automation"
-    ]
-  },
+  // Top 12 curated featured projects
+  var FEATURED_PROJECTS = [
   {
     "title": "Containerlab",
     "cat": "Containerlab",
-    "stars": "2,841",
     "href": "containerlab/#clab-core",
     "desc": "Open-source virtual network lab orchestrator for containers and virtual machines.",
     "tags": [
@@ -1066,44 +965,19 @@
     ]
   },
   {
-    "title": "Netlab",
-    "cat": "General Networking",
-    "stars": "746",
-    "href": "networking/#gen-netlab",
-    "desc": "Network automation tool creating topology diagrams and provisioning lab environments using Containerlab.",
+    "title": "Nokia EDA",
+    "cat": "EDA",
+    "href": "eda/#eda-core",
+    "desc": "Kubernetes-native event-driven automation platform for data center fabric operations.",
     "tags": [
-      "#lab",
-      "#topology"
-    ]
-  },
-  {
-    "title": "gNMIc",
-    "cat": "General Networking",
-    "stars": "322",
-    "href": "networking/#gen-gnmic",
-    "desc": "Open source gNMI CLI client and collector with full SR Linux and SROS telemetry support.",
-    "tags": [
-      "#telemetry",
-      "#gnmi",
-      "#official"
-    ]
-  },
-  {
-    "title": "vrnetlab",
-    "cat": "Containerlab",
-    "stars": "287",
-    "href": "containerlab/#vrnetlab",
-    "desc": "Tool to convert VM-based network device images into Containerlab-compatible containers.",
-    "tags": [
-      "#containers",
-      "#vm",
-      "#official"
+      "#eda",
+      "#automation",
+      "#k8s"
     ]
   },
   {
     "title": "Clabernetes",
     "cat": "Containerlab",
-    "stars": "135",
     "href": "containerlab/#clabernetes",
     "desc": "Containerlab in Kubernetes allowing distributed, scale-out network labs.",
     "tags": [
@@ -1113,57 +987,99 @@
     ]
   },
   {
-    "title": "SR Linux Lab Container",
+    "title": "TopoBuilder for EDA",
+    "cat": "EDA",
+    "href": "eda/#eda-topobuilder",
+    "desc": "Tool to design, visualize, and generate EDA fabric topology definitions.",
+    "tags": [
+      "#topology",
+      "#eda",
+      "#ui"
+    ]
+  },
+  {
+    "title": "gNMIc",
+    "cat": "General Networking",
+    "href": "networking/#gen-gnmic",
+    "desc": "Open source gNMI CLI client and collector with full SR Linux and SROS telemetry support.",
+    "tags": [
+      "#telemetry",
+      "#gnmi",
+      "#official"
+    ]
+  },
+  {
+    "title": "Try-EDA Playground",
+    "cat": "EDA",
+    "href": "eda/#eda-playground",
+    "desc": "Interactive browser-based hands-on sandbox for experiencing Nokia Event-Driven Automation without local setup.",
+    "tags": [
+      "#eda",
+      "#playground",
+      "#sandbox"
+    ]
+  },
+  {
+    "title": "Netlab",
+    "cat": "General Networking",
+    "href": "networking/#gen-netlab",
+    "desc": "Network automation tool creating topology diagrams and provisioning lab environments using Containerlab.",
+    "tags": [
+      "#lab",
+      "#topology"
+    ]
+  },
+  {
+    "title": "SR Linux NDK",
     "cat": "SR Linux",
-    "stars": "101",
-    "href": "srlinux/#srl-lab-container",
-    "desc": "Virtual SR Linux node container image for lab testing, automation experiments, and development.",
+    "href": "srlinux/#srl-ndk",
+    "desc": "Official development framework and SDKs for programming high-performance, on-box custom C++, Go, and Python agents and CLI plugins on Nokia SR Linux.",
     "tags": [
-      "#lab",
-      "#srlinux",
+      "#ndk",
+      "#development",
+      "#sdk",
       "#official"
     ]
   },
   {
-    "title": "SROS YANG Models",
-    "cat": "SROS",
-    "stars": "77",
-    "href": "sros/#sros-yang-models",
-    "desc": "Official repository of Nokia 7x50 SROS YANG models for model-driven configuration and state.",
+    "title": "NSP Automation Examples",
+    "cat": "NSP",
+    "href": "nsp/#nsp-automation-examples",
+    "desc": "Production-ready Python scripts and Postman collections for automating Nokia NSP via REST and Kafka.",
     "tags": [
-      "#yang",
-      "#sros",
+      "#automation",
+      "#python",
+      "#rest",
       "#official"
-    ]
-  },
-  {
-    "title": "Antimony",
-    "cat": "Containerlab",
-    "stars": "57",
-    "href": "containerlab/#antimony",
-    "desc": "Alternative GUI and lab manager focused on educational environments.",
-    "tags": [
-      "#gui",
-      "#lab",
-      "#education"
     ]
   },
   {
     "title": "pySROS Python Library",
     "cat": "SROS",
-    "stars": "57",
     "href": "sros/#sros-pysros",
     "desc": "Python client library for model-driven management and automation of Nokia SROS routers.",
     "tags": [
       "#sros",
       "#python",
-      "#automation"
+      "#automation",
+      "#official"
+    ]
+  },
+  {
+    "title": "RAVEN",
+    "cat": "General Networking",
+    "href": "networking/#gen-raven",
+    "desc": "BGP Routing Security Monitor & BMP observability engine with native support for Nokia SROS and SR Linux routers.",
+    "tags": [
+      "#bgp",
+      "#security",
+      "#bmp",
+      "#official"
     ]
   },
   {
     "title": "Muxus",
     "cat": "General Apps",
-    "stars": "43",
     "href": "apps/#gen-app-muxus",
     "desc": "Modern terminal multiplexer with seamless split-pane SSH sessions for network engineers.",
     "tags": [
@@ -1173,11 +1089,6 @@
     ]
   }
 ];
-
-  function getStarSvg(isDark) {
-    var starColor = isDark ? '#fbbf24' : '#d97706';
-    return '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="' + starColor + '" stroke="' + starColor + '" stroke-width="2" style="display:inline-block;vertical-align:-1px;margin-right:3px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
-  }
 
   function findSearchShadow() {
     var host = Array.from(document.body.children).find(function (el) { return el.shadowRoot; });
@@ -1298,12 +1209,6 @@
       }
 
       if (allTermsMatch && score > 0) {
-        if (card.stars) {
-          var numStars = parseInt(card.stars.replace(/,/g, ''), 10);
-          if (!isNaN(numStars)) {
-            score += Math.min(numStars / 100, 80);
-          }
-        }
         matches.push({ card: card, score: score, terms: terms });
       }
     }
@@ -1391,17 +1296,19 @@
     return { z: z, header: header, list: list };
   }
 
+  var isRendering = false;
   function renderView(shadow, query) {
-    var els = getOrInjectSearchElements(shadow);
-    if (!els) return;
+    if (isRendering) return;
+    isRendering = true;
+    try {
+      var els = getOrInjectSearchElements(shadow);
+      if (!els) return;
 
     var header = els.header;
     var list = els.list;
     var rawQ = (query || '').trim();
 
     var isDark = document.body.getAttribute('data-md-color-scheme') === 'slate';
-    var starSvg = getStarSvg(isDark);
-    var starTextColor = isDark ? '#38bdf8' : '#0369a1';
     var headerTextColor = isDark ? '#94a3b8' : '#475569';
     var breadcrumbColor = isDark ? '#94a3b8' : '#64748b';
     var titleColor = isDark ? '#f8fafc' : '#0f172a';
@@ -1409,20 +1316,13 @@
     var tagBg = isDark ? '#1e293b' : '#f1f5f9';
     var tagColor = isDark ? '#7dd3fc' : '#0369a1';
     var tagBorder = isDark ? '1px solid rgba(56,189,248,0.25)' : '1px solid #cbd5e1';
-    var officialBg = isDark ? 'rgba(56,189,248,0.15)' : 'rgba(2,132,199,0.1)';
-    var officialColor = isDark ? '#38bdf8' : '#0284c7';
-    var officialBorder = isDark ? '1px solid rgba(56,189,248,0.35)' : '1px solid rgba(2,132,199,0.3)';
-    var popularBg = isDark ? 'rgba(251,191,36,0.15)' : 'rgba(217,119,6,0.1)';
-    var popularColor = isDark ? '#fbbf24' : '#d97706';
-    var popularBorder = isDark ? '1px solid rgba(251,191,36,0.35)' : '1px solid rgba(217,119,6,0.3)';
-
     header.style.color = headerTextColor;
     var base = getBaseScope();
 
     if (rawQ === '') {
-      // PREPOPULATED (Top 12 Star-Ranked Projects)
-      header.innerHTML = '<span>POPULAR PROJECTS (BY GITHUB STARS)</span><span style="display:flex;align-items:center;">' + starSvg + ' STARS</span>';
-      list.innerHTML = POPULAR_PROJECTS.map(function (item, idx) {
+      // PREPOPULATED (Top 12 Curated Featured Projects)
+      header.innerHTML = '<span>FEATURED PROJECTS</span><span style="font-size:10px;opacity:0.85;letter-spacing:0.04em;">CURATED</span>';
+      list.innerHTML = FEATURED_PROJECTS.map(function (item, idx) {
         var fullUrl;
         try {
           fullUrl = new URL(item.href, base).href;
@@ -1436,7 +1336,6 @@
               '<div class="C">' +
                 '<div class="D">' +
                   '<menu class="n"><li style="color:' + breadcrumbColor + ';">' + item.cat + '</li></menu>' +
-                  '<span class="E prepopulated-star-count" style="font-weight:600;display:inline-flex;align-items:center;color:' + starTextColor + ';">' + starSvg + ' ' + item.stars + '</span>' +
                 '</div>' +
                 '<h2 class="x" style="color:' + titleColor + ';">' + item.title + '</h2>' +
                 '<div class="u" style="color:' + descColor + ';">' +
@@ -1477,15 +1376,6 @@
             fullUrl = card.href;
           }
 
-          var badgeHtml = '';
-          if (card.stars) {
-            badgeHtml = '<span class="E prepopulated-star-count" style="font-weight:600;display:inline-flex;align-items:center;color:' + starTextColor + ';">' + starSvg + ' ' + card.stars + '</span>';
-          } else if (card.badge === 'Official') {
-            badgeHtml = '<span class="card-badge-pill" style="font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px;background:' + officialBg + ';color:' + officialColor + ';border:' + officialBorder + ';text-transform:uppercase;letter-spacing:0.04em;">Official</span>';
-          } else if (card.badge === 'Popular') {
-            badgeHtml = '<span class="card-badge-pill" style="font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px;background:' + popularBg + ';color:' + popularColor + ';border:' + popularBorder + ';text-transform:uppercase;letter-spacing:0.04em;">Popular</span>';
-          }
-
           var activeClass = idx === 0 ? ' h' : '';
           var highlightedTitle = highlightTerms(card.title, match.terms);
           var highlightedDesc = highlightTerms(card.desc, match.terms);
@@ -1496,7 +1386,6 @@
                 '<div class="C">' +
                   '<div class="D">' +
                     '<menu class="n"><li style="color:' + breadcrumbColor + ';">' + card.cat + '</li></menu>' +
-                    badgeHtml +
                   '</div>' +
                   '<h2 class="x" style="color:' + titleColor + ';">' + highlightedTitle + '</h2>' +
                   '<div class="u" style="color:' + descColor + ';">' +
@@ -1527,17 +1416,22 @@
         if (backdrop) backdrop.click();
       });
     });
+  } finally {
+    isRendering = false;
   }
+}
 
   function setupSearchShadow(shadow) {
-    if (!shadow) return;
+    if (!shadow || shadow._hasCardSearchSetup) return;
 
     function attachListeners() {
+      if (shadow._hasCardSearchSetup) return true;
       var input = shadow.querySelector('input');
       var modalEl = shadow.querySelector('.l');
       var z = shadow.querySelector('.z');
 
       if (!input || !z) return false;
+      shadow._hasCardSearchSetup = true;
 
       // Ensure our custom style and elements exist
       getOrInjectSearchElements(shadow);
@@ -1619,10 +1513,11 @@
       // Keep custom view rendered even if Preact mutates .z
       if (z && !z._hasCardSearchObserver) {
         z._hasCardSearchObserver = true;
-        var zObserver = new MutationObserver(function (mutations) {
+        var zObserver = new MutationObserver(function () {
+          if (isRendering) return;
           var hasOurList = z.querySelector('.card-search-list');
-          var curInput = shadow.querySelector('input');
           if (!hasOurList) {
+            var curInput = shadow.querySelector('input');
             renderView(shadow, curInput ? curInput.value : '');
           }
         });
@@ -1657,7 +1552,7 @@
   // Observe creation of the search modal shadow root
   var bodyObserver = new MutationObserver(function () {
     var shadow = findSearchShadow();
-    if (shadow) setupSearchShadow(shadow);
+    if (shadow && !shadow._hasCardSearchSetup) setupSearchShadow(shadow);
   });
   bodyObserver.observe(document.body, { childList: true });
 
