@@ -848,6 +848,21 @@ a.headerlink {
   }
 }
 
+/* ========================================================
+   SUPPRESS TEXT HIGHLIGHTING ON SEARCH NAVIGATION
+   Only the card container itself should be highlighted (.card-target-focus)
+   ======================================================== */
+mark[data-md-highlight],
+[data-md-highlight],
+.md-typeset mark {
+  background: transparent !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
 /* Card Heading Title (h3) */
 .md-typeset .grid.cards.compact-cards > ul > li > h3,
 .md-typeset .grid.cards.compact-cards > ol > li > h3 {

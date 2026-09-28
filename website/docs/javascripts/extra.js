@@ -1,23 +1,48 @@
-// Awesome Nokia - Search Card Target Focus & Smooth Navigation
+// Awesome Nokia - Search Card Target Focus & Strict Curated Search Engine
 (function () {
+  'use strict';
+
+  // Strip any ?h= query parameter and remove text highlights
+  function stripHighlightParam() {
+    try {
+      if (window.location.search && window.location.search.includes('h=')) {
+        var url = new URL(window.location.href);
+        url.searchParams.delete('h');
+        window.history.replaceState(null, '', url.pathname + (url.search || '') + url.hash);
+      }
+      var marks = document.querySelectorAll('mark[data-md-highlight]');
+      for (var i = 0; i < marks.length; i++) {
+        var m = marks[i];
+        var parent = m.parentNode;
+        if (parent) {
+          while (m.firstChild) parent.insertBefore(m.firstChild, m);
+          parent.removeChild(m);
+        }
+      }
+    } catch (e) {
+      // Ignore
+    }
+  }
+
   function highlightTargetCard() {
-    const hash = window.location.hash;
+    stripHighlightParam();
+    var hash = window.location.hash;
     // Clear any previous focus
-    document.querySelectorAll('.card-target-focus').forEach(el => {
+    document.querySelectorAll('.card-target-focus').forEach(function (el) {
       el.classList.remove('card-target-focus');
     });
 
     if (!hash || hash.length <= 1) return;
 
     try {
-      const targetId = decodeURIComponent(hash.slice(1));
-      const targetEl = document.getElementById(targetId);
+      var targetId = decodeURIComponent(hash.slice(1));
+      var targetEl = document.getElementById(targetId);
       if (targetEl) {
-        const card = targetEl.closest('li');
+        var card = targetEl.closest('li');
         if (card) {
           card.classList.add('card-target-focus');
           // Smoothly scroll the card into view, vertically centered
-          setTimeout(() => {
+          setTimeout(function () {
             card.scrollIntoView({ behavior: 'smooth', block: 'center' });
           }, 80);
         }
@@ -46,33 +71,1116 @@
   document.addEventListener('DOMContentSwitch', highlightTargetCard);
 
   // ========================================================
-  // PREPOPULATED SEARCH (Star-Ranked Official Projects)
+  // STRICT CURATED CARDS SEARCH DATASET (65 Resources)
   // ========================================================
-  // PREPOPULATED SEARCH (Star-Ranked Official Projects)
-  // ========================================================
+  var CURATED_CARDS = [
+  {
+    "id": "clab-core",
+    "title": "Containerlab",
+    "cat": "Containerlab",
+    "href": "containerlab/#clab-core",
+    "desc": "Open-source virtual network lab orchestrator for containers and virtual machines.",
+    "tags": [
+      "#lab",
+      "#orchestration",
+      "#containers",
+      "#cli",
+      "#official"
+    ],
+    "stars": "2,841",
+    "badge": "Popular"
+  },
+  {
+    "id": "clab-gui",
+    "title": "Containerlab GUI",
+    "cat": "Containerlab",
+    "href": "containerlab/#clab-gui",
+    "desc": "GUI for Containerlab available as a VS Code extension, desktop app, self-hosted web app, or browser sandbox.",
+    "tags": [
+      "#gui",
+      "#vscode",
+      "#ui",
+      "#lab",
+      "#official"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "antimony",
+    "title": "Antimony",
+    "cat": "Containerlab",
+    "href": "containerlab/#antimony",
+    "desc": "Alternative GUI and lab manager focused on educational environments created at Eastern Switzerland University of Applied Sciences.",
+    "tags": [
+      "#gui",
+      "#lab",
+      "#education",
+      "#community"
+    ],
+    "stars": "57",
+    "badge": "Community"
+  },
+  {
+    "id": "vrnetlab",
+    "title": "vrnetlab",
+    "cat": "Containerlab",
+    "href": "containerlab/#vrnetlab",
+    "desc": "Tool to convert VM-based network device images into Containerlab-compatible containers.",
+    "tags": [
+      "#containers",
+      "#lab",
+      "#vm",
+      "#official"
+    ],
+    "stars": "287",
+    "badge": "Official"
+  },
+  {
+    "id": "clabernetes",
+    "title": "Clabernetes",
+    "cat": "Containerlab",
+    "href": "containerlab/#clabernetes",
+    "desc": "Containerlab in Kubernetes allowing distributed, scale-out network labs.",
+    "tags": [
+      "#kubernetes",
+      "#cloud",
+      "#lab",
+      "#scale",
+      "#official"
+    ],
+    "stars": "135",
+    "badge": "Official"
+  },
+  {
+    "id": "clab-wsl",
+    "title": "WSL Containerlab",
+    "cat": "Containerlab",
+    "href": "containerlab/#clab-wsl",
+    "desc": "Ready-to-use Windows Subsystem for Linux (WSL2) distribution that makes network labbing with Containerlab and Docker seamless on Windows 10 and 11.",
+    "tags": [
+      "#containerlab",
+      "#wsl",
+      "#windows",
+      "#lab",
+      "#official"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "clab-discord",
+    "title": "Containerlab Discord",
+    "cat": "Containerlab",
+    "href": "containerlab/#clab-discord",
+    "desc": "Official Containerlab community chat server for questions, announcements, and lab discussions.",
+    "tags": [
+      "#community",
+      "#chat",
+      "#support"
+    ],
+    "badge": "Community"
+  },
+  {
+    "id": "srl-lab-container",
+    "title": "SR Linux Lab Container",
+    "cat": "SR Linux",
+    "href": "srlinux/#srl-lab-container",
+    "desc": "Virtual SR Linux node container image for lab testing, automation experiments, and development.",
+    "tags": [
+      "#lab",
+      "#srlinux",
+      "#containers",
+      "#official"
+    ],
+    "stars": "101",
+    "badge": "Official"
+  },
+  {
+    "id": "srl-pydantic",
+    "title": "Pydantic Models for SR Linux",
+    "cat": "SR Linux",
+    "href": "srlinux/#srl-pydantic",
+    "desc": "Generate Python Pydantic validation models for SR Linux configuration and telemetry paths.",
+    "tags": [
+      "#python",
+      "#pydantic",
+      "#validation",
+      "#automation"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "srl-yang-browser",
+    "title": "SR Linux YANG Browser",
+    "cat": "SR Linux",
+    "href": "srlinux/#srl-yang-browser",
+    "desc": "Searchable database and interactive schema browser of all SR Linux model paths (gNMI, JSON, etc.).",
+    "tags": [
+      "#yang",
+      "#browser",
+      "#gnmi",
+      "#tooling",
+      "#official"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "srl-vscode-lsp",
+    "title": "VS Code Language Server for SR Linux & SROS",
+    "cat": "SR Linux",
+    "href": "srlinux/#srl-vscode-lsp",
+    "desc": "Advanced auto-completion, linting, and schema validation for SR Linux and SROS configuration files.",
+    "tags": [
+      "#vscode",
+      "#schema",
+      "#lsp",
+      "#ide",
+      "#srlinux",
+      "#sros"
+    ],
+    "badge": "Popular"
+  },
+  {
+    "id": "srl-multicli",
+    "title": "MultiCLI",
+    "cat": "SR Linux",
+    "href": "srlinux/#srl-multicli",
+    "desc": "CLI plugin emulating common commands of other vendor NOSes to ease operator migration to SR Linux.",
+    "tags": [
+      "#cli",
+      "#migration",
+      "#plugin",
+      "#nos"
+    ],
+    "badge": "Community"
+  },
+  {
+    "id": "srl-gpt",
+    "title": "SR Linux GPT",
+    "cat": "SR Linux",
+    "href": "srlinux/#srl-gpt",
+    "desc": "Application integrating OpenAI ChatGPT as an AI assistant agent directly into the SR Linux command line.",
+    "tags": [
+      "#ai",
+      "#chatgpt",
+      "#cli",
+      "#llm"
+    ],
+    "badge": "Popular"
+  },
+  {
+    "id": "srl-frontpanel",
+    "title": "Front Panel CLI Plugin",
+    "cat": "SR Linux",
+    "href": "srlinux/#srl-frontpanel",
+    "desc": "Visual ASCII/graphical representation of switch front panel and port statuses directly in the terminal.",
+    "tags": [
+      "#cli",
+      "#ui",
+      "#tui",
+      "#hardware"
+    ],
+    "badge": "Popular"
+  },
+  {
+    "id": "srl-conversion-tool",
+    "title": "SR Linux Conversion Tool (srlconv)",
+    "cat": "SR Linux",
+    "href": "srlinux/#srl-conversion-tool",
+    "desc": "Convert configurations between software versions and compare syntax representations seamlessly.",
+    "tags": [
+      "#cli",
+      "#migration",
+      "#conversion",
+      "#config"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "srl-custom-snmp",
+    "title": "Custom SNMP Framework",
+    "cat": "SR Linux",
+    "href": "srlinux/#srl-custom-snmp",
+    "desc": "Comprehensive guide and developer framework for creating custom SNMP MIBs in SR Linux.",
+    "tags": [
+      "#snmp",
+      "#monitoring",
+      "#telemetry",
+      "#guide"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "srl-ansible-collections",
+    "title": "SR Linux Ansible Collections",
+    "cat": "SR Linux",
+    "href": "srlinux/#srl-ansible-collections",
+    "desc": "Official Ansible modules and plugins for automating SR Linux network configuration and state verification.",
+    "tags": [
+      "#ansible",
+      "#automation",
+      "#devops",
+      "#official"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "srl-skills",
+    "title": "Nokia SR Skills",
+    "cat": "SR Linux",
+    "href": "srlinux/#srl-skills",
+    "desc": "Claude Skill plugin teaching LLM agents how to inspect and operate Nokia SR Linux and SROS devices.",
+    "tags": [
+      "#ai",
+      "#claude",
+      "#agents",
+      "#automation",
+      "#srlinux",
+      "#sros"
+    ],
+    "badge": "Community"
+  },
+  {
+    "id": "srl-yang-models",
+    "title": "SR Linux YANG Models",
+    "cat": "SR Linux",
+    "href": "srlinux/#srl-yang-models",
+    "desc": "Public repository of all standard and vendor-augmented Nokia SR Linux YANG models.",
+    "tags": [
+      "#yang",
+      "#schema",
+      "#official"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "srl-napalm",
+    "title": "NAPALM SR Linux",
+    "cat": "SR Linux",
+    "href": "srlinux/#srl-napalm",
+    "desc": "Community-maintained NAPALM network automation driver for SR Linux devices.",
+    "tags": [
+      "#napalm",
+      "#python",
+      "#automation",
+      "#community"
+    ],
+    "badge": "Community"
+  },
+  {
+    "id": "srl-ndk",
+    "title": "SR Linux NDK",
+    "cat": "SR Linux",
+    "href": "srlinux/#srl-ndk",
+    "desc": "Official development framework and SDKs for programming high-performance, on-box custom C++, Go, and Python agents and CLI plugins on Nokia SR Linux.",
+    "tags": [
+      "#ndk",
+      "#sdk",
+      "#srlinux",
+      "#development",
+      "#official"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "srl-fcli",
+    "title": "fcli",
+    "cat": "SR Linux",
+    "href": "srlinux/#srl-fcli",
+    "desc": "Fabric observability tool for Nokia SR Linux fabrics, providing a real-time web UI, terminal CLI reports, and an MCP server for AI coding assistants over gNMI.",
+    "tags": [
+      "#observability",
+      "#gnmi",
+      "#srlinux",
+      "#mcp",
+      "#cli"
+    ],
+    "badge": "Community"
+  },
+  {
+    "id": "srl-discord",
+    "title": "SR Linux Discord Community",
+    "cat": "SR Linux",
+    "href": "srlinux/#srl-discord",
+    "desc": "Official community chat for SR Linux and SROS network engineers, developers, and architects.",
+    "tags": [
+      "#community",
+      "#chat",
+      "#support"
+    ],
+    "badge": "Community"
+  },
+  {
+    "id": "eda-core",
+    "title": "Nokia EDA",
+    "cat": "EDA",
+    "href": "eda/#eda-core",
+    "desc": "Nokia's event-driven automation network orchestrator.",
+    "tags": [
+      "#eda",
+      "#automation",
+      "#orchestration",
+      "#official"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "eda-playground",
+    "title": "Try-EDA Playground",
+    "cat": "EDA",
+    "href": "eda/#eda-playground",
+    "desc": "Run Nokia Event-Driven Automation locally for free in lightweight virtualized environments.",
+    "tags": [
+      "#eda",
+      "#lab",
+      "#playground",
+      "#k8s",
+      "#official"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "eda-codespaces",
+    "title": "CodeSpaces Playground for EDA",
+    "cat": "EDA",
+    "href": "eda/#eda-codespaces",
+    "desc": "Run full Nokia EDA for free in the cloud using GitHub CodeSpaces with zero local installation.",
+    "tags": [
+      "#eda",
+      "#codespaces",
+      "#cloud",
+      "#playground",
+      "#official"
+    ],
+    "badge": "Popular"
+  },
+  {
+    "id": "eda-vscode-extension",
+    "title": "EDA VS Code Extension",
+    "cat": "EDA",
+    "href": "eda/#eda-vscode-extension",
+    "desc": "Visual Studio Code extension for reading and writing EDA configuration, intents, and runtime state.",
+    "tags": [
+      "#vscode",
+      "#eda",
+      "#ide",
+      "#extension",
+      "#official"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "eda-topobuilder",
+    "title": "TopoBuilder for EDA",
+    "cat": "EDA",
+    "href": "eda/#eda-topobuilder",
+    "desc": "Interactive web application for designing topologies and importing them into EDA workflows.",
+    "tags": [
+      "#eda",
+      "#topology",
+      "#ui",
+      "#tooling"
+    ],
+    "badge": "Popular"
+  },
+  {
+    "id": "eda-resource-browser-community",
+    "title": "EDA Resource Browser (Community)",
+    "cat": "EDA",
+    "href": "eda/#eda-resource-browser-community",
+    "desc": "Visualize, browse, and compare EDA custom resource definitions (CRDs) with rich search and diffing.",
+    "tags": [
+      "#eda",
+      "#crd",
+      "#browser",
+      "#ui",
+      "#community"
+    ],
+    "badge": "Community"
+  },
+  {
+    "id": "eda-image-manager",
+    "title": "EDA Image Manager",
+    "cat": "EDA",
+    "href": "eda/#eda-image-manager",
+    "desc": "Simplify managing switch and node firmware images when operating EDA in lab and test environments.",
+    "tags": [
+      "#eda",
+      "#images",
+      "#firmware",
+      "#lab",
+      "#community"
+    ],
+    "badge": "Community"
+  },
+  {
+    "id": "eda-resource-browser-official",
+    "title": "Nokia EDA Resource Browser",
+    "cat": "EDA",
+    "href": "eda/#eda-resource-browser-official",
+    "desc": "Official web-based custom resource definition (CRD) browser maintained directly by Nokia EDA team.",
+    "tags": [
+      "#eda",
+      "#crd",
+      "#browser",
+      "#official"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "eda-pydantic",
+    "title": "Pydantic Models for EDA",
+    "cat": "EDA",
+    "href": "eda/#eda-pydantic",
+    "desc": "Generate Python Pydantic validation models and typings for EDA Kubernetes custom resources.",
+    "tags": [
+      "#pydantic",
+      "#python",
+      "#eda",
+      "#validation"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "eda-ansible-collections",
+    "title": "EDA Ansible Collections",
+    "cat": "EDA",
+    "href": "eda/#eda-ansible-collections",
+    "desc": "Ansible modules and roles for declaring, deploying, and managing Nokia EDA fabric operations.",
+    "tags": [
+      "#ansible",
+      "#eda",
+      "#automation",
+      "#devops"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "eda-terraform",
+    "title": "EDA Terraform Providers",
+    "cat": "EDA",
+    "href": "eda/#eda-terraform",
+    "desc": "Official Terraform and OpenTofu provider for Nokia EDA infrastructure as code (IaC) workflows.",
+    "tags": [
+      "#terraform",
+      "#iac",
+      "#eda",
+      "#cloud"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "eda-discord",
+    "title": "EDA Discord Community",
+    "cat": "EDA",
+    "href": "eda/#eda-discord",
+    "desc": "Official community chat for Nokia EDA operators, developers, and automation specialists.",
+    "tags": [
+      "#community",
+      "#chat",
+      "#support"
+    ],
+    "badge": "Community"
+  },
+  {
+    "id": "nsp-telemetry-pipelines",
+    "title": "NSP Telemetry Pipelines",
+    "cat": "NSP",
+    "href": "nsp/#nsp-telemetry-pipelines",
+    "desc": "Modular proof-of-concept telemetry pipelines and stream processing scenarios built for Nokia NSP.",
+    "tags": [
+      "#nsp",
+      "#telemetry",
+      "#kafka",
+      "#pipelines",
+      "#monitoring"
+    ],
+    "badge": "Community"
+  },
+  {
+    "id": "nsp-ansible-collection",
+    "title": "NSP Ansible Collection",
+    "cat": "NSP",
+    "href": "nsp/#nsp-ansible-collection",
+    "desc": "Ansible collection for orchestrating Nokia Network Services Platform via standard RESTCONF APIs.",
+    "tags": [
+      "#nsp",
+      "#ansible",
+      "#restconf",
+      "#automation"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "nsp-vscode-wfm",
+    "title": "VSCode Workflow Manager Plugin",
+    "cat": "NSP",
+    "href": "nsp/#nsp-vscode-wfm",
+    "desc": "VS Code plugin for authoring, editing, linting, and managing NSP Workflow Manager (WFM) workflows.",
+    "tags": [
+      "#nsp",
+      "#vscode",
+      "#workflows",
+      "#ide"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "nsp-vscode-intent",
+    "title": "VSCode Intent Manager Plugin",
+    "cat": "NSP",
+    "href": "nsp/#nsp-vscode-intent",
+    "desc": "Visual Studio Code plugin for creating, debugging, and testing NSP Intent Manager models and intent types.",
+    "tags": [
+      "#nsp",
+      "#vscode",
+      "#intents",
+      "#ide"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "nsp-automation-examples",
+    "title": "NSP Automation Examples",
+    "cat": "NSP",
+    "href": "nsp/#nsp-automation-examples",
+    "desc": "Curated collection of programmable workflows, scripts, and intent-type examples for Nokia NSP.",
+    "tags": [
+      "#nsp",
+      "#automation",
+      "#examples",
+      "#workflows",
+      "#intents"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "sros-srsim-container",
+    "title": "SR-SIM Lab Container",
+    "cat": "SROS",
+    "href": "sros/#sros-srsim-container",
+    "desc": "Virtual SROS (7x50) container node for simulated lab use (requires Nokia Support or Sales portal access).",
+    "tags": [
+      "#sros",
+      "#lab",
+      "#simulation",
+      "#containers",
+      "#official"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "sros-srsim-hw-schema",
+    "title": "SR-SIM HW Schema App",
+    "cat": "SROS",
+    "href": "sros/#sros-srsim-hw-schema",
+    "desc": "Web utility to generate and validate Containerlab hardware configurations and card slot models for SR-SIM nodes.",
+    "tags": [
+      "#sros",
+      "#containerlab",
+      "#hardware",
+      "#schema",
+      "#community"
+    ],
+    "badge": "Community"
+  },
+  {
+    "id": "sros-vscode-lsp",
+    "title": "VS Code Language Server (SROS)",
+    "cat": "SROS",
+    "href": "sros/#sros-vscode-lsp",
+    "desc": "Intelligent auto-completion and schema validation for Nokia SROS and SR Linux configuration syntaxes.",
+    "tags": [
+      "#vscode",
+      "#schema",
+      "#sros",
+      "#srlinux",
+      "#ide"
+    ],
+    "badge": "Popular"
+  },
+  {
+    "id": "sros-yang-browser",
+    "title": "SROS YANG Browser",
+    "cat": "SROS",
+    "href": "sros/#sros-yang-browser",
+    "desc": "Interactive searchable database and tree navigator of all Nokia SROS YANG model paths and leaf attributes.",
+    "tags": [
+      "#yang",
+      "#sros",
+      "#browser",
+      "#official"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "sros-pysros",
+    "title": "pySROS Python Library",
+    "cat": "SROS",
+    "href": "sros/#sros-pysros",
+    "desc": "Official model-driven Python client library for programmatically interacting with Nokia 7x50 SROS routers.",
+    "tags": [
+      "#python",
+      "#sros",
+      "#api",
+      "#automation",
+      "#official"
+    ],
+    "stars": "57",
+    "badge": "Official"
+  },
+  {
+    "id": "sros-ebooks",
+    "title": "SROS Technical eBooks",
+    "cat": "SROS",
+    "href": "sros/#sros-ebooks",
+    "desc": "Free technical eBooks covering SROS architectures, protocols, advanced routing, and service design.",
+    "tags": [
+      "#sros",
+      "#books",
+      "#documentation",
+      "#learning"
+    ],
+    "badge": "Popular"
+  },
+  {
+    "id": "sros-ansible-collections",
+    "title": "SROS Ansible Collections",
+    "cat": "SROS",
+    "href": "sros/#sros-ansible-collections",
+    "desc": "Official Ansible modules for configuration deployment, audit, and operational tasks on Nokia SROS.",
+    "tags": [
+      "#ansible",
+      "#sros",
+      "#automation",
+      "#devops"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "sros-skills",
+    "title": "Nokia SR Skills for AI Agents",
+    "cat": "SROS",
+    "href": "sros/#sros-skills",
+    "desc": "Claude Skill plugin teaching LLM agents how to inspect, query, and operate Nokia SROS & SR Linux devices.",
+    "tags": [
+      "#ai",
+      "#claude",
+      "#agents",
+      "#sros",
+      "#srlinux"
+    ],
+    "badge": "Community"
+  },
+  {
+    "id": "sros-yang-models",
+    "title": "SROS YANG Models Repository",
+    "cat": "SROS",
+    "href": "sros/#sros-yang-models",
+    "desc": "Complete official repository of all Nokia 7x50 SROS YANG models across major releases.",
+    "tags": [
+      "#yang",
+      "#sros",
+      "#schema",
+      "#official"
+    ],
+    "stars": "77",
+    "badge": "Official"
+  },
+  {
+    "id": "sros-napalm",
+    "title": "NAPALM SROS Driver",
+    "cat": "SROS",
+    "href": "sros/#sros-napalm",
+    "desc": "Community NAPALM driver allowing multi-vendor automation scripts to control Nokia SROS nodes.",
+    "tags": [
+      "#napalm",
+      "#python",
+      "#sros",
+      "#automation",
+      "#community"
+    ],
+    "badge": "Community"
+  },
+  {
+    "id": "sros-discord",
+    "title": "SROS Community Discord",
+    "cat": "SROS",
+    "href": "sros/#sros-discord",
+    "desc": "Dedicated SROS channels within the official SR Linux Discord community server.",
+    "tags": [
+      "#community",
+      "#chat",
+      "#support"
+    ],
+    "badge": "Community"
+  },
+  {
+    "id": "gen-network-design-hub",
+    "title": "Network Design Hub",
+    "cat": "Networking",
+    "href": "networking/#gen-network-design-hub",
+    "desc": "Nokia Validated Designs (NVD) and reference architectures for data center, IP/MPLS, and optical networks.",
+    "tags": [
+      "#design",
+      "#architecture",
+      "#reference",
+      "#official"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "gen-ai-network-calculator",
+    "title": "AI Network Calculator",
+    "cat": "Networking",
+    "href": "networking/#gen-ai-network-calculator",
+    "desc": "Interactive calculator for designing and sizing 2-tier GPU fabrics, rail-optimized networks, and leaf-spine switches.",
+    "tags": [
+      "#ai",
+      "#calculator",
+      "#gpu",
+      "#datacenter",
+      "#fabric"
+    ],
+    "badge": "Popular"
+  },
+  {
+    "id": "gen-protomap",
+    "title": "ProtoMap",
+    "cat": "Networking",
+    "href": "networking/#gen-protomap",
+    "desc": "Interactive visualizer for gNMI, gNOI, gNSI, and gRIBI protobuf service specifications and RPC interfaces.",
+    "tags": [
+      "#gnmi",
+      "#gnoi",
+      "#proto",
+      "#visualizer",
+      "#telemetry"
+    ],
+    "badge": "Community"
+  },
+  {
+    "id": "gen-gnmic",
+    "title": "gNMIc",
+    "cat": "Networking",
+    "href": "networking/#gen-gnmic",
+    "desc": "Fast, full-featured gNMI CLI client and telemetry collector created by Nokia with multi-target streaming.",
+    "tags": [
+      "#gnmi",
+      "#telemetry",
+      "#cli",
+      "#collector",
+      "#official"
+    ],
+    "stars": "322",
+    "badge": "Popular"
+  },
+  {
+    "id": "gen-gnmic-operator",
+    "title": "gNMIc Operator",
+    "cat": "Networking",
+    "href": "networking/#gen-gnmic-operator",
+    "desc": "Kubernetes operator to deploy, scale, and manage gNMIc telemetry collector clusters dynamically.",
+    "tags": [
+      "#kubernetes",
+      "#gnmi",
+      "#operator",
+      "#telemetry",
+      "#official"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "gen-raven",
+    "title": "RAVEN",
+    "cat": "Networking",
+    "href": "networking/#gen-raven",
+    "desc": "Single-binary BGP routing security observability tool by Nokia that connects to routers via BMP, validates routes against RPKI ROV and ASPA in real time, and exports metrics.",
+    "tags": [
+      "#bgp",
+      "#security",
+      "#rpki",
+      "#bmp",
+      "#official"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "gen-netconf-vscode",
+    "title": "NETCONF VS Code Extension",
+    "cat": "Networking",
+    "href": "networking/#gen-netconf-vscode",
+    "desc": "Full-featured NETCONF client built for VS Code with RPC execution, filter testing, and session management.",
+    "tags": [
+      "#netconf",
+      "#vscode",
+      "#ide",
+      "#extension",
+      "#official"
+    ],
+    "badge": "Official"
+  },
+  {
+    "id": "gen-netlab",
+    "title": "Netlab",
+    "cat": "Networking",
+    "href": "networking/#gen-netlab",
+    "desc": "Multi-vendor network lab virtualization tool with deep support for SR Linux, SROS, and automated protocol configs.",
+    "tags": [
+      "#lab",
+      "#multivendor",
+      "#automation",
+      "#python",
+      "#community"
+    ],
+    "stars": "746",
+    "badge": "Popular"
+  },
+  {
+    "id": "gen-robot-framework",
+    "title": "Robot Framework",
+    "cat": "Networking",
+    "href": "networking/#gen-robot-framework",
+    "desc": "Generic open source automation framework for acceptance testing and RPA originally founded at Nokia.",
+    "tags": [
+      "#testing",
+      "#automation",
+      "#robot-framework",
+      "#python",
+      "#official"
+    ],
+    "stars": "11,916",
+    "badge": "Popular"
+  },
+  {
+    "id": "gen-kubenet",
+    "title": "Kubenet",
+    "cat": "Networking",
+    "href": "networking/#gen-kubenet",
+    "desc": "Open source community initiatives leveraging Kubernetes primitives and controllers for network automation.",
+    "tags": [
+      "#kubernetes",
+      "#automation",
+      "#cloud-native",
+      "#community"
+    ],
+    "badge": "Community"
+  },
+  {
+    "id": "gen-scrapli",
+    "title": "Scrapli",
+    "cat": "Networking",
+    "href": "networking/#gen-scrapli",
+    "desc": "Fast, async-capable Python/Go network connection and automation library supporting SR Linux and SROS.",
+    "tags": [
+      "#python",
+      "#async",
+      "#automation",
+      "#ssh",
+      "#community"
+    ],
+    "badge": "Popular"
+  },
+  {
+    "id": "gen-netmiko",
+    "title": "Netmiko",
+    "cat": "Networking",
+    "href": "networking/#gen-netmiko",
+    "desc": "Multi-vendor Python SSH automation library with first-class support for Nokia SR Linux and SROS devices.",
+    "tags": [
+      "#python",
+      "#automation",
+      "#ssh",
+      "#multivendor",
+      "#community"
+    ],
+    "stars": "4,295",
+    "badge": "Popular"
+  },
+  {
+    "id": "gen-app-muxus",
+    "title": "Muxus",
+    "cat": "Apps",
+    "href": "apps/#gen-app-muxus",
+    "desc": "Free, open-source SSH, Telnet, and serial terminal client with split panes, saved workspaces, and remote editor.",
+    "tags": [
+      "#ssh",
+      "#terminal",
+      "#workspace",
+      "#gui",
+      "#community"
+    ],
+    "stars": "43",
+    "badge": "Community"
+  },
+  {
+    "id": "gen-app-kubus",
+    "title": "Kubus",
+    "cat": "Apps",
+    "href": "apps/#gen-app-kubus",
+    "desc": "Free, fast, open-source desktop Kubernetes GUI for inspecting pods, CRDs, clusters, and logs.",
+    "tags": [
+      "#kubernetes",
+      "#gui",
+      "#devops",
+      "#community"
+    ],
+    "badge": "Community"
+  }
+];
+
+  // Top 12 official & community projects ranked by GitHub stars
+  var POPULAR_PROJECTS = [
+  {
+    "title": "Robot Framework",
+    "cat": "General Networking",
+    "stars": "11,916",
+    "href": "networking/#gen-robot-framework",
+    "desc": "Generic open source automation framework for acceptance testing and test-driven development.",
+    "tags": [
+      "#testing",
+      "#automation"
+    ]
+  },
+  {
+    "title": "Netmiko",
+    "cat": "General Networking",
+    "stars": "4,295",
+    "href": "networking/#gen-netmiko",
+    "desc": "Multi-vendor Python library to simplify CLI connections to network devices via SSH.",
+    "tags": [
+      "#python",
+      "#ssh",
+      "#automation"
+    ]
+  },
+  {
+    "title": "Containerlab",
+    "cat": "Containerlab",
+    "stars": "2,841",
+    "href": "containerlab/#clab-core",
+    "desc": "Open-source virtual network lab orchestrator for containers and virtual machines.",
+    "tags": [
+      "#lab",
+      "#orchestration",
+      "#official"
+    ]
+  },
+  {
+    "title": "Netlab",
+    "cat": "General Networking",
+    "stars": "746",
+    "href": "networking/#gen-netlab",
+    "desc": "Network automation tool creating topology diagrams and provisioning lab environments using Containerlab.",
+    "tags": [
+      "#lab",
+      "#topology"
+    ]
+  },
+  {
+    "title": "gNMIc",
+    "cat": "General Networking",
+    "stars": "322",
+    "href": "networking/#gen-gnmic",
+    "desc": "Open source gNMI CLI client and collector with full SR Linux and SROS telemetry support.",
+    "tags": [
+      "#telemetry",
+      "#gnmi",
+      "#official"
+    ]
+  },
+  {
+    "title": "vrnetlab",
+    "cat": "Containerlab",
+    "stars": "287",
+    "href": "containerlab/#vrnetlab",
+    "desc": "Tool to convert VM-based network device images into Containerlab-compatible containers.",
+    "tags": [
+      "#containers",
+      "#vm",
+      "#official"
+    ]
+  },
+  {
+    "title": "Clabernetes",
+    "cat": "Containerlab",
+    "stars": "135",
+    "href": "containerlab/#clabernetes",
+    "desc": "Containerlab in Kubernetes allowing distributed, scale-out network labs.",
+    "tags": [
+      "#kubernetes",
+      "#cloud",
+      "#official"
+    ]
+  },
+  {
+    "title": "SR Linux Lab Container",
+    "cat": "SR Linux",
+    "stars": "101",
+    "href": "srlinux/#srl-lab-container",
+    "desc": "Virtual SR Linux node container image for lab testing, automation experiments, and development.",
+    "tags": [
+      "#lab",
+      "#srlinux",
+      "#official"
+    ]
+  },
+  {
+    "title": "SROS YANG Models",
+    "cat": "SROS",
+    "stars": "77",
+    "href": "sros/#sros-yang-models",
+    "desc": "Official repository of Nokia 7x50 SROS YANG models for model-driven configuration and state.",
+    "tags": [
+      "#yang",
+      "#sros",
+      "#official"
+    ]
+  },
+  {
+    "title": "Antimony",
+    "cat": "Containerlab",
+    "stars": "57",
+    "href": "containerlab/#antimony",
+    "desc": "Alternative GUI and lab manager focused on educational environments.",
+    "tags": [
+      "#gui",
+      "#lab",
+      "#education"
+    ]
+  },
+  {
+    "title": "pySROS Python Library",
+    "cat": "SROS",
+    "stars": "57",
+    "href": "sros/#sros-pysros",
+    "desc": "Python client library for model-driven management and automation of Nokia SROS routers.",
+    "tags": [
+      "#sros",
+      "#python",
+      "#automation"
+    ]
+  },
+  {
+    "title": "Muxus",
+    "cat": "General Apps",
+    "stars": "43",
+    "href": "apps/#gen-app-muxus",
+    "desc": "Modern terminal multiplexer with seamless split-pane SSH sessions for network engineers.",
+    "tags": [
+      "#terminal",
+      "#ssh",
+      "#gui"
+    ]
+  }
+];
+
   function getStarSvg(isDark) {
-    const starColor = isDark ? '#fbbf24' : '#d97706';
+    var starColor = isDark ? '#fbbf24' : '#d97706';
     return '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="' + starColor + '" stroke="' + starColor + '" stroke-width="2" style="display:inline-block;vertical-align:-1px;margin-right:3px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
   }
 
-  // Top 12 official & community projects ranked by GitHub stars
-  const POPULAR_PROJECTS = [
-    { title: "Robot Framework", cat: "General Networking", stars: "11,916", href: "networking/#gen-robot-framework", desc: "Generic open source automation framework for acceptance testing and test-driven development.", tags: ["#testing", "#automation"] },
-    { title: "Netmiko", cat: "General Networking", stars: "4,295", href: "networking/#gen-netmiko", desc: "Multi-vendor Python library to simplify CLI connections to network devices via SSH.", tags: ["#python", "#ssh", "#automation"] },
-    { title: "Containerlab", cat: "Containerlab", stars: "2,841", href: "containerlab/#clab-core", desc: "Open-source virtual network lab orchestrator for containers and virtual machines.", tags: ["#lab", "#orchestration", "#official"] },
-    { title: "Netlab", cat: "General Networking", stars: "746", href: "networking/#gen-netlab", desc: "Network automation tool creating topology diagrams and provisioning lab environments using Containerlab.", tags: ["#lab", "#topology"] },
-    { title: "gNMIc", cat: "General Networking", stars: "322", href: "networking/#gen-gnmic", desc: "Open source gNMI CLI client and collector with full SR Linux and SROS telemetry support.", tags: ["#telemetry", "#gnmi", "#official"] },
-    { title: "vrnetlab", cat: "Containerlab", stars: "287", href: "containerlab/#vrnetlab", desc: "Tool to convert VM-based network device images into Containerlab-compatible containers.", tags: ["#containers", "#vm", "#official"] },
-    { title: "Clabernetes", cat: "Containerlab", stars: "135", href: "containerlab/#clabernetes", desc: "Containerlab in Kubernetes allowing distributed, scale-out network labs.", tags: ["#kubernetes", "#cloud", "#official"] },
-    { title: "SR Linux Lab Container", cat: "SR Linux", stars: "101", href: "srlinux/#srl-lab-container", desc: "Virtual SR Linux node container image for lab testing, automation experiments, and development.", tags: ["#lab", "#srlinux", "#official"] },
-    { title: "SROS YANG Models", cat: "SROS", stars: "77", href: "sros/#sros-yang-models", desc: "Official repository of Nokia 7x50 SROS YANG models for model-driven configuration and state.", tags: ["#yang", "#sros", "#official"] },
-    { title: "Antimony", cat: "Containerlab", stars: "57", href: "containerlab/#antimony", desc: "Alternative GUI and lab manager focused on educational environments.", tags: ["#gui", "#lab", "#education"] },
-    { title: "pySROS Python Library", cat: "SROS", stars: "57", href: "sros/#sros-pysros", desc: "Python client library for model-driven management and automation of Nokia SROS routers.", tags: ["#sros", "#python", "#automation"] },
-    { title: "Muxus", cat: "General Apps", stars: "43", href: "apps/#gen-app-muxus", desc: "Modern terminal multiplexer with seamless split-pane SSH sessions for network engineers.", tags: ["#terminal", "#ssh", "#gui"] }
-  ];
-
   function findSearchShadow() {
-    const host = Array.from(document.body.children).find(el => el.shadowRoot);
+    var host = Array.from(document.body.children).find(function (el) { return el.shadowRoot; });
     return host ? host.shadowRoot : null;
   }
 
@@ -81,7 +1189,7 @@
       if (typeof __md_scope !== 'undefined' && __md_scope.href) {
         return __md_scope.href;
       }
-      const logoLink = document.querySelector('.md-header__button.md-logo');
+      var logoLink = document.querySelector('.md-header__button.md-logo');
       if (logoLink && logoLink.href) {
         return logoLink.href;
       }
@@ -91,151 +1199,443 @@
     return window.location.origin + '/awesome-nokia/';
   }
 
-  function renderPrepopulated(shadow) {
-    if (!shadow) return;
-    const list = shadow.querySelector('ol.b');
-    const z = shadow.querySelector('.z');
-    const input = shadow.querySelector('input');
-    if (!list || !z || !input) return;
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
 
-    // Only populate when input is empty
-    if (input.value.trim() !== '') return;
+  function highlightTerms(text, terms) {
+    if (!text) return '';
+    var escaped = escapeHtml(text);
+    if (!terms || terms.length === 0) return escaped;
+    var pattern = terms
+      .map(function (t) { return t.replace(/[.*+?^\$\{\}()|[\]\\]/g, '\\$&'); })
+      .filter(Boolean)
+      .join('|');
+    if (!pattern) return escaped;
+    try {
+      var re = new RegExp('(' + pattern + ')', 'gi');
+      return escaped.replace(re, '<mark style="background:transparent;color:var(--color-highlight,#38bdf8);font-weight:700;">$1</mark>');
+    } catch (err) {
+      return escaped;
+    }
+  }
 
-    const isDark = document.body.getAttribute('data-md-color-scheme') === 'slate';
-    const starSvg = getStarSvg(isDark);
-    const starTextColor = isDark ? '#38bdf8' : '#0369a1';
-    const headerTextColor = isDark ? '#94a3b8' : '#475569';
-    const breadcrumbColor = isDark ? '#94a3b8' : '#64748b';
-    const titleColor = isDark ? '#f8fafc' : '#0f172a';
-    const descColor = isDark ? '#cbd5e1' : '#334155';
-    const tagBg = isDark ? '#1e293b' : '#f1f5f9';
-    const tagColor = isDark ? '#7dd3fc' : '#0369a1';
-    const tagBorder = isDark ? '1px solid rgba(56,189,248,0.25)' : '1px solid #cbd5e1';
+  function searchCuratedCards(query) {
+    var rawQ = (query || '').trim();
+    if (!rawQ) return [];
 
-    let header = shadow.querySelector('.prepopulated-header');
+    var q = rawQ.toLowerCase();
+    var isTagSearch = q.startsWith('#');
+    var cleanQ = isTagSearch ? q.slice(1) : q;
+    var terms = cleanQ.split(/\s+/).filter(Boolean);
+
+    if (terms.length === 0) return [];
+
+    var matches = [];
+
+    for (var i = 0; i < CURATED_CARDS.length; i++) {
+      var card = CURATED_CARDS[i];
+      var titleLower = card.title.toLowerCase();
+      var descLower = card.desc.toLowerCase();
+      var catLower = card.cat.toLowerCase();
+      var tagsClean = card.tags.map(function (t) { return t.toLowerCase().replace(/^#/, ''); });
+
+      var allTermsMatch = true;
+      var score = 0;
+
+      for (var j = 0; j < terms.length; j++) {
+        var term = terms[j];
+        var termMatched = false;
+
+        // Title matching
+        if (titleLower === term) {
+          score += 1000;
+          termMatched = true;
+        } else if (titleLower.startsWith(term)) {
+          score += 600;
+          termMatched = true;
+        } else if (titleLower.includes(' ' + term) || titleLower.includes(term + ' ')) {
+          score += 400;
+          termMatched = true;
+        } else if (titleLower.includes(term)) {
+          score += 300;
+          termMatched = true;
+        }
+
+        // Tag matching
+        var tagExact = tagsClean.find(function (t) { return t === term; });
+        var tagSub = tagsClean.find(function (t) { return t.includes(term); });
+        if (tagExact) {
+          score += (isTagSearch ? 900 : 500);
+          termMatched = true;
+        } else if (tagSub) {
+          score += (isTagSearch ? 500 : 250);
+          termMatched = true;
+        }
+
+        // Description matching
+        if (descLower.includes(term)) {
+          score += 100;
+          termMatched = true;
+        }
+
+        // Category / platform matching
+        if (catLower.includes(term)) {
+          score += 50;
+          termMatched = true;
+        }
+
+        if (!termMatched) {
+          allTermsMatch = false;
+          break;
+        }
+      }
+
+      if (allTermsMatch && score > 0) {
+        if (card.stars) {
+          var numStars = parseInt(card.stars.replace(/,/g, ''), 10);
+          if (!isNaN(numStars)) {
+            score += Math.min(numStars / 100, 80);
+          }
+        }
+        matches.push({ card: card, score: score, terms: terms });
+      }
+    }
+
+    matches.sort(function (a, b) { return b.score - a.score; });
+    return matches;
+  }
+
+  function getOrInjectSearchElements(shadow) {
+    var z = shadow.querySelector('.z');
+    if (!z) return null;
+
+    // Inject custom scoped CSS into shadow root to suppress native results and style card search
+    if (!shadow.getElementById('card-search-custom-css')) {
+      var style = document.createElement('style');
+      style.id = 'card-search-custom-css';
+      style.textContent = [
+        '/* Hide native Preact results container and native header */',
+        '.z > h3.B:not(.card-search-header),',
+        '.z > ol.b:not(.card-search-list) {',
+        '  display: none !important;',
+        '}',
+        '.card-search-list {',
+        '  display: flex !important;',
+        '  flex-direction: column !important;',
+        '  gap: 2px !important;',
+        '  line-height: 1.3 !important;',
+        '  padding: 0 !important;',
+        '  margin: var(--space-2) !important;',
+        '  margin-top: 0 !important;',
+        '  list-style: none !important;',
+        '}',
+        '.card-search-item {',
+        '  margin: 0 !important;',
+        '  list-style: none !important;',
+        '}',
+        '.card-search-header {',
+        '  display: flex !important;',
+        '  justify-content: space-between !important;',
+        '  align-items: center !important;',
+        '  font-weight: 600 !important;',
+        '  letter-spacing: 0.05em !important;',
+        '  padding: 6px 14px 4px 14px !important;',
+        '  font-size: 11px !important;',
+        '}',
+        '.card-search-empty {',
+        '  padding: 28px 16px !important;',
+        '  text-align: center !important;',
+        '  font-size: 13.5px !important;',
+        '  line-height: 1.6 !important;',
+        '}',
+        '.card-search-empty-hint {',
+        '  font-size: 12px !important;',
+        '  margin-top: 8px !important;',
+        '  opacity: 0.75 !important;',
+        '}',
+        '.card-search-tags {',
+        '  display: flex !important;',
+        '  flex-wrap: wrap !important;',
+        '  gap: 4px !important;',
+        '  margin-top: 6px !important;',
+        '}'
+      ].join('\n');
+      shadow.appendChild(style);
+    }
+
+    var header = z.querySelector('.card-search-header');
     if (!header) {
       header = document.createElement('div');
-      header.className = 'B prepopulated-header';
-      z.insertBefore(header, list);
+      header.className = 'B card-search-header';
+      z.insertBefore(header, z.firstChild);
     }
-    header.style.display = 'flex';
-    header.style.justifyContent = 'space-between';
-    header.style.alignItems = 'center';
-    header.style.fontWeight = '600';
-    header.style.letterSpacing = '0.05em';
-    header.style.padding = '6px 14px 4px 14px';
-    header.style.fontSize = '11px';
-    header.style.color = headerTextColor;
-    header.innerHTML = '<span>POPULAR PROJECTS (BY GITHUB STARS)</span><span style="display:flex;align-items:center;">' + starSvg + ' STARS</span>';
 
-    const base = getBaseScope();
-
-    list.innerHTML = POPULAR_PROJECTS.map(item => {
-      let fullUrl;
-      try {
-        fullUrl = new URL(item.href, base).href;
-      } catch (err) {
-        fullUrl = item.href;
+    var list = z.querySelector('.card-search-list');
+    if (!list) {
+      list = document.createElement('ol');
+      list.className = 'b card-search-list';
+      if (header.nextSibling) {
+        z.insertBefore(list, header.nextSibling);
+      } else {
+        z.appendChild(list);
       }
-      return (
-        '<li class="prepopulated-item">' +
-          '<a href="' + fullUrl + '" class="i">' +
-            '<div class="C">' +
-              '<div class="D">' +
-                '<menu class="n"><li style="color:' + breadcrumbColor + ';">' + item.cat + '</li></menu>' +
-                '<span class="E prepopulated-star-count" style="font-weight:600;display:inline-flex;align-items:center;color:' + starTextColor + ';">' + starSvg + ' ' + item.stars + '</span>' +
-              '</div>' +
-              '<h2 class="x" style="color:' + titleColor + ';">' + item.title + '</h2>' +
-              '<div class="u" style="color:' + descColor + ';">' + item.desc + ' ' + item.tags.map(t => '<code style="background:' + tagBg + ';color:' + tagColor + ';border:' + tagBorder + ';padding:2px 6px;border-radius:4px;font-size:11px;">' + t + '</code>').join(' ') + '</div>' +
-            '</div>' +
-          '</a>' +
-        '</li>'
-      );
-    }).join('');
+    }
 
-    // Clicking an item closes the search dialog
-    list.querySelectorAll('.prepopulated-item a').forEach(a => {
-      a.addEventListener('click', () => {
-        const backdrop = shadow.querySelector('.p');
+    return { z: z, header: header, list: list };
+  }
+
+  function renderView(shadow, query) {
+    var els = getOrInjectSearchElements(shadow);
+    if (!els) return;
+
+    var header = els.header;
+    var list = els.list;
+    var rawQ = (query || '').trim();
+
+    var isDark = document.body.getAttribute('data-md-color-scheme') === 'slate';
+    var starSvg = getStarSvg(isDark);
+    var starTextColor = isDark ? '#38bdf8' : '#0369a1';
+    var headerTextColor = isDark ? '#94a3b8' : '#475569';
+    var breadcrumbColor = isDark ? '#94a3b8' : '#64748b';
+    var titleColor = isDark ? '#f8fafc' : '#0f172a';
+    var descColor = isDark ? '#cbd5e1' : '#334155';
+    var tagBg = isDark ? '#1e293b' : '#f1f5f9';
+    var tagColor = isDark ? '#7dd3fc' : '#0369a1';
+    var tagBorder = isDark ? '1px solid rgba(56,189,248,0.25)' : '1px solid #cbd5e1';
+    var officialBg = isDark ? 'rgba(56,189,248,0.15)' : 'rgba(2,132,199,0.1)';
+    var officialColor = isDark ? '#38bdf8' : '#0284c7';
+    var officialBorder = isDark ? '1px solid rgba(56,189,248,0.35)' : '1px solid rgba(2,132,199,0.3)';
+    var popularBg = isDark ? 'rgba(251,191,36,0.15)' : 'rgba(217,119,6,0.1)';
+    var popularColor = isDark ? '#fbbf24' : '#d97706';
+    var popularBorder = isDark ? '1px solid rgba(251,191,36,0.35)' : '1px solid rgba(217,119,6,0.3)';
+
+    header.style.color = headerTextColor;
+    var base = getBaseScope();
+
+    if (rawQ === '') {
+      // PREPOPULATED (Top 12 Star-Ranked Projects)
+      header.innerHTML = '<span>POPULAR PROJECTS (BY GITHUB STARS)</span><span style="display:flex;align-items:center;">' + starSvg + ' STARS</span>';
+      list.innerHTML = POPULAR_PROJECTS.map(function (item, idx) {
+        var fullUrl;
+        try {
+          fullUrl = new URL(item.href, base).href;
+        } catch (err) {
+          fullUrl = item.href;
+        }
+        var activeClass = idx === 0 ? ' h' : '';
+        return (
+          '<li class="card-search-item" data-index="' + idx + '">' +
+            '<a href="' + fullUrl + '" class="i' + activeClass + '">' +
+              '<div class="C">' +
+                '<div class="D">' +
+                  '<menu class="n"><li style="color:' + breadcrumbColor + ';">' + item.cat + '</li></menu>' +
+                  '<span class="E prepopulated-star-count" style="font-weight:600;display:inline-flex;align-items:center;color:' + starTextColor + ';">' + starSvg + ' ' + item.stars + '</span>' +
+                '</div>' +
+                '<h2 class="x" style="color:' + titleColor + ';">' + item.title + '</h2>' +
+                '<div class="u" style="color:' + descColor + ';">' +
+                  item.desc +
+                  '<div class="card-search-tags">' +
+                    item.tags.map(function (t) {
+                      return '<code class="card-tag-pill" style="background:' + tagBg + ';color:' + tagColor + ';border:' + tagBorder + ';padding:2px 6px;border-radius:4px;font-size:11px;line-height:1.4;">' + t + '</code>';
+                    }).join(' ') +
+                  '</div>' +
+                '</div>' +
+              '</div>' +
+            '</a>' +
+          '</li>'
+        );
+      }).join('');
+    } else {
+      // STRICT CARD SEARCH (Only matching 65 curated cards)
+      var matches = searchCuratedCards(rawQ);
+      if (matches.length === 0) {
+        header.innerHTML = '<span>NO CURATED RESULTS</span><span>0 MATCHES</span>';
+        list.innerHTML = (
+          '<li class="card-search-item card-search-empty" style="color:' + descColor + ';">' +
+            'No curated resource cards match "<strong>' + escapeHtml(rawQ) + '</strong>".' +
+            '<div class="card-search-empty-hint" style="color:' + breadcrumbColor + ';">' +
+              'Try searching by tool name (e.g. "Containerlab", "fcli", "RAVEN"), platform ("SR Linux", "EDA", "SROS"), or tag (e.g. "#automation", "#telemetry", "#lab").' +
+            '</div>' +
+          '</li>'
+        );
+      } else {
+        var countText = matches.length + ' CURATED CARD' + (matches.length === 1 ? '' : 'S');
+        header.innerHTML = '<span>' + countText + '</span><span style="font-size:10px;opacity:0.85;letter-spacing:0.04em;">CARD ONLY</span>';
+        list.innerHTML = matches.map(function (match, idx) {
+          var card = match.card;
+          var fullUrl;
+          try {
+            fullUrl = new URL(card.href, base).href;
+          } catch (err) {
+            fullUrl = card.href;
+          }
+
+          var badgeHtml = '';
+          if (card.stars) {
+            badgeHtml = '<span class="E prepopulated-star-count" style="font-weight:600;display:inline-flex;align-items:center;color:' + starTextColor + ';">' + starSvg + ' ' + card.stars + '</span>';
+          } else if (card.badge === 'Official') {
+            badgeHtml = '<span class="card-badge-pill" style="font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px;background:' + officialBg + ';color:' + officialColor + ';border:' + officialBorder + ';text-transform:uppercase;letter-spacing:0.04em;">Official</span>';
+          } else if (card.badge === 'Popular') {
+            badgeHtml = '<span class="card-badge-pill" style="font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px;background:' + popularBg + ';color:' + popularColor + ';border:' + popularBorder + ';text-transform:uppercase;letter-spacing:0.04em;">Popular</span>';
+          }
+
+          var activeClass = idx === 0 ? ' h' : '';
+          var highlightedTitle = highlightTerms(card.title, match.terms);
+          var highlightedDesc = highlightTerms(card.desc, match.terms);
+
+          return (
+            '<li class="card-search-item" data-index="' + idx + '">' +
+              '<a href="' + fullUrl + '" class="i' + activeClass + '">' +
+                '<div class="C">' +
+                  '<div class="D">' +
+                    '<menu class="n"><li style="color:' + breadcrumbColor + ';">' + card.cat + '</li></menu>' +
+                    badgeHtml +
+                  '</div>' +
+                  '<h2 class="x" style="color:' + titleColor + ';">' + highlightedTitle + '</h2>' +
+                  '<div class="u" style="color:' + descColor + ';">' +
+                    highlightedDesc +
+                    '<div class="card-search-tags">' +
+                      card.tags.map(function (t) {
+                        return '<code class="card-tag-pill" style="background:' + tagBg + ';color:' + tagColor + ';border:' + tagBorder + ';padding:2px 6px;border-radius:4px;font-size:11px;line-height:1.4;">' + t + '</code>';
+                      }).join(' ') +
+                    '</div>' +
+                  '</div>' +
+                '</div>' +
+              '</a>' +
+            '</li>'
+          );
+        }).join('');
+      }
+    }
+
+    // Attach click and mouse hover handlers to rendered items
+    var links = list.querySelectorAll('.card-search-item a');
+    links.forEach(function (a, idx) {
+      a.addEventListener('mouseenter', function () {
+        links.forEach(function (el) { el.classList.remove('h'); });
+        a.classList.add('h');
+      });
+      a.addEventListener('click', function (e) {
+        var backdrop = shadow.querySelector('.p');
         if (backdrop) backdrop.click();
       });
     });
-  }
-
-  function clearPrepopulated(shadow) {
-    if (!shadow) return;
-    const header = shadow.querySelector('.prepopulated-header');
-    if (header) {
-      header.style.display = 'none';
-    }
-    shadow.querySelectorAll('.prepopulated-item').forEach(el => el.remove());
   }
 
   function setupSearchShadow(shadow) {
     if (!shadow) return;
 
     function attachListeners() {
-      const input = shadow.querySelector('input');
-      const list = shadow.querySelector('ol.b');
-      const modalEl = shadow.querySelector('.l');
-      const z = shadow.querySelector('.z');
+      var input = shadow.querySelector('input');
+      var modalEl = shadow.querySelector('.l');
+      var z = shadow.querySelector('.z');
 
-      if (!input || !list || !z) return false;
+      if (!input || !z) return false;
 
-      if (!input._hasPrepopulateListener) {
-        input._hasPrepopulateListener = true;
-        const handleQuery = () => {
-          if (input.value.trim() === '') {
-            renderPrepopulated(shadow);
-          } else {
-            clearPrepopulated(shadow);
-          }
+      // Ensure our custom style and elements exist
+      getOrInjectSearchElements(shadow);
+
+      if (!input._hasCardSearchListener) {
+        input._hasCardSearchListener = true;
+
+        var handleQuery = function () {
+          renderView(shadow, input.value);
         };
+
         input.addEventListener('input', handleQuery);
         input.addEventListener('keyup', handleQuery);
         input.addEventListener('search', handleQuery);
-        input.addEventListener('focus', () => {
-          if (input.value.trim() === '') {
-            renderPrepopulated(shadow);
+        input.addEventListener('focus', function () {
+          renderView(shadow, input.value);
+        });
+
+        // Keyboard navigation across card search results
+        input.addEventListener('keydown', function (e) {
+          var els = getOrInjectSearchElements(shadow);
+          if (!els) return;
+          var links = Array.from(els.list.querySelectorAll('.card-search-item a'));
+          if (links.length === 0) return;
+
+          var activeIdx = links.findIndex(function (a) { return a.classList.contains('h'); });
+          if (activeIdx === -1) activeIdx = 0;
+
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            e.stopPropagation();
+            var nextIdx = Math.min(activeIdx + 1, links.length - 1);
+            links.forEach(function (a, i) {
+              if (i === nextIdx) {
+                a.classList.add('h');
+                a.scrollIntoView({ block: 'nearest' });
+              } else {
+                a.classList.remove('h');
+              }
+            });
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            e.stopPropagation();
+            var prevIdx = Math.max(activeIdx - 1, 0);
+            links.forEach(function (a, i) {
+              if (i === prevIdx) {
+                a.classList.add('h');
+                a.scrollIntoView({ block: 'nearest' });
+              } else {
+                a.classList.remove('h');
+              }
+            });
+          } else if (e.key === 'Enter') {
+            e.preventDefault();
+            e.stopPropagation();
+            if (links[activeIdx]) {
+              links[activeIdx].click();
+            }
+          } else if (e.key === 'Escape') {
+            e.preventDefault();
+            var backdrop = shadow.querySelector('.p');
+            if (backdrop) backdrop.click();
           }
         });
       }
 
-      if (modalEl && !modalEl._hasPrepopulateObserver) {
-        modalEl._hasPrepopulateObserver = true;
-        const modalObserver = new MutationObserver(() => {
+      if (modalEl && !modalEl._hasCardSearchObserver) {
+        modalEl._hasCardSearchObserver = true;
+        var modalObserver = new MutationObserver(function () {
           if (!modalEl.classList.contains('d')) {
             // Modal opened
-            const curInput = shadow.querySelector('input');
-            if (curInput && curInput.value.trim() === '') {
-              renderPrepopulated(shadow);
-            }
+            var curInput = shadow.querySelector('input');
+            renderView(shadow, curInput ? curInput.value : '');
           }
         });
         modalObserver.observe(modalEl, { attributes: true, attributeFilter: ['class'] });
       }
 
-      if (list && !list._hasPrepopulateObserver) {
-        list._hasPrepopulateObserver = true;
-        const listObserver = new MutationObserver(() => {
-          const curInput = shadow.querySelector('input');
-          if (curInput && curInput.value.trim() === '' && list.children.length === 0) {
-            renderPrepopulated(shadow);
+      // Keep custom view rendered even if Preact mutates .z
+      if (z && !z._hasCardSearchObserver) {
+        z._hasCardSearchObserver = true;
+        var zObserver = new MutationObserver(function (mutations) {
+          var hasOurList = z.querySelector('.card-search-list');
+          var curInput = shadow.querySelector('input');
+          if (!hasOurList) {
+            renderView(shadow, curInput ? curInput.value : '');
           }
         });
-        listObserver.observe(list, { childList: true });
+        zObserver.observe(z, { childList: true });
       }
 
-      // Initial render if input is currently empty
-      if (input.value.trim() === '') {
-        renderPrepopulated(shadow);
-      }
-
+      // Initial render
+      renderView(shadow, input.value);
       return true;
     }
 
     if (!attachListeners()) {
-      const shadowObs = new MutationObserver(() => {
+      var shadowObs = new MutationObserver(function () {
         if (attachListeners()) {
           shadowObs.disconnect();
         }
@@ -244,36 +1644,35 @@
     }
   }
 
-  // Observe theme changes to dynamically refresh prepopulated colors
-  const themeObserver = new MutationObserver(() => {
-    const shadow = findSearchShadow();
+  // Observe theme changes to dynamically refresh search colors
+  var themeObserver = new MutationObserver(function () {
+    var shadow = findSearchShadow();
     if (shadow) {
-      const input = shadow.querySelector('input');
-      if (input && input.value.trim() === '') {
-        renderPrepopulated(shadow);
-      }
+      var input = shadow.querySelector('input');
+      renderView(shadow, input ? input.value : '');
     }
   });
   themeObserver.observe(document.body, { attributes: true, attributeFilter: ['data-md-color-scheme'] });
 
   // Observe creation of the search modal shadow root
-  const bodyObserver = new MutationObserver(() => {
-    const shadow = findSearchShadow();
+  var bodyObserver = new MutationObserver(function () {
+    var shadow = findSearchShadow();
     if (shadow) setupSearchShadow(shadow);
   });
   bodyObserver.observe(document.body, { childList: true });
 
-  const existingShadow = findSearchShadow();
+  var existingShadow = findSearchShadow();
   if (existingShadow) setupSearchShadow(existingShadow);
 
   // Global search triggers
-  document.querySelectorAll('.md-search__button, label[for="__search"]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      setTimeout(() => {
-        const shadow = findSearchShadow();
+  document.querySelectorAll('.md-search__button, label[for="__search"]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      setTimeout(function () {
+        var shadow = findSearchShadow();
         if (shadow) {
           setupSearchShadow(shadow);
-          renderPrepopulated(shadow);
+          var input = shadow.querySelector('input');
+          renderView(shadow, input ? input.value : '');
         }
       }, 60);
     });
