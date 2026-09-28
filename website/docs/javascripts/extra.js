@@ -28,8 +28,9 @@
     stripHighlightParam();
     var hash = window.location.hash;
     // Clear any previous focus
-    document.querySelectorAll('.card-target-focus').forEach(function (el) {
+    document.querySelectorAll('.card-target-focus, .card-keyboard-active').forEach(function (el) {
       el.classList.remove('card-target-focus');
+      el.classList.remove('card-keyboard-active');
     });
 
     if (!hash || hash.length <= 1) return;
@@ -41,6 +42,7 @@
         var card = targetEl.closest('li');
         if (card) {
           card.classList.add('card-target-focus');
+          card.classList.add('card-keyboard-active');
           // Smoothly scroll the card into view, vertically centered
           setTimeout(function () {
             card.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -69,6 +71,177 @@
     });
   }
   document.addEventListener('DOMContentSwitch', highlightTargetCard);
+
+  // ========================================================
+  // PAGE CARD KEYBOARD NAVIGATION (Spatial 2D Grid, Enter Launch)
+  // ========================================================
+  function getPageCards() {
+    return Array.from(document.querySelectorAll('.md-typeset .grid.cards > ul > li, .md-typeset .grid.cards > ol > li'));
+  }
+
+  function getGridColumns(cards) {
+    if (!cards || cards.length <= 1) return 1;
+    var firstTop = cards[0].offsetTop;
+    var cols = 0;
+    for (var i = 0; i < cards.length; i++) {
+      if (Math.abs(cards[i].offsetTop - firstTop) < 15) {
+        cols++;
+      } else {
+        break;
+      }
+    }
+    return Math.max(1, cols);
+  }
+
+  function isSearchModalOpen() {
+    var shadow = findSearchShadow();
+    if (!shadow) return false;
+    var modalEl = shadow.querySelector('.l');
+    if (modalEl && !modalEl.classList.contains('d')) {
+      return true;
+    }
+    return false;
+  }
+
+  function isInputFocused() {
+    var active = document.activeElement;
+    if (!active) return false;
+    var tag = active.tagName.toLowerCase();
+    return tag === 'input' || tag === 'textarea' || tag === 'select' || active.isContentEditable;
+  }
+
+  function getCardPrimaryLink(card) {
+    if (!card) return null;
+    return card.querySelector('.card-btn-primary') ||
+           card.querySelector('.ecosystem-btn') ||
+           card.querySelector('.card-btn') ||
+           card.querySelector('h3 a');
+  }
+
+  function setActiveCard(cards, newIdx) {
+    cards.forEach(function (c, i) {
+      if (i === newIdx) {
+        c.classList.add('card-keyboard-active');
+        try {
+          c.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } catch (e) {
+          c.scrollIntoView(false);
+        }
+      } else {
+        c.classList.remove('card-keyboard-active');
+        c.classList.remove('card-target-focus');
+      }
+    });
+  }
+
+  function clearActiveCards(cards) {
+    cards.forEach(function (c) {
+      c.classList.remove('card-keyboard-active');
+      c.classList.remove('card-target-focus');
+    });
+  }
+
+  function handlePageKeyDown(e) {
+    if (e.ctrlKey || e.altKey || e.metaKey) return;
+    if (isSearchModalOpen()) return;
+    if (isInputFocused()) return;
+
+    // Shift + ArrowUp / ArrowDown scrolls page content smoothly without changing card selection
+    if (e.shiftKey) {
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        window.scrollBy({ top: 180, behavior: 'smooth' });
+        return;
+      }
+      if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        window.scrollBy({ top: -180, behavior: 'smooth' });
+        return;
+      }
+      return;
+    }
+
+    var navKeys = ['ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight', 'Enter', 'Escape'];
+    if (navKeys.indexOf(e.key) === -1) return;
+
+    var cards = getPageCards();
+    if (!cards || cards.length === 0) return;
+
+    var activeIdx = cards.findIndex(function (c) {
+      return c.classList.contains('card-keyboard-active') || c.classList.contains('card-target-focus');
+    });
+
+    if (e.key === 'Escape') {
+      if (activeIdx !== -1) {
+        e.preventDefault();
+        clearActiveCards(cards);
+      }
+      return;
+    }
+
+    if (e.key === 'Enter') {
+      if (activeIdx >= 0 && activeIdx < cards.length) {
+        var card = cards[activeIdx];
+        var targetLink = getCardPrimaryLink(card);
+        if (targetLink) {
+          e.preventDefault();
+          e.stopPropagation();
+          targetLink.click();
+        }
+      }
+      return;
+    }
+
+    // Directional keys: ArrowDown, ArrowUp, ArrowLeft, ArrowRight
+    // When no card is selected, ANY directional arrow key selects cards[0]
+    if (activeIdx === -1) {
+      e.preventDefault();
+      setActiveCard(cards, 0);
+      return;
+    }
+
+    var cols = getGridColumns(cards);
+    var newIdx = activeIdx;
+
+    if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      newIdx = Math.min(cards.length - 1, activeIdx + 1);
+    } else if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      newIdx = Math.max(0, activeIdx - 1);
+    } else if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      if (activeIdx + cols < cards.length) {
+        newIdx = activeIdx + cols;
+      } else if (activeIdx < cards.length - 1 && Math.floor(activeIdx / cols) < Math.floor((cards.length - 1) / cols)) {
+        newIdx = cards.length - 1;
+      }
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (activeIdx - cols >= 0) {
+        newIdx = activeIdx - cols;
+      }
+    }
+
+    if (newIdx !== activeIdx) {
+      setActiveCard(cards, newIdx);
+    }
+  }
+
+  if (!window._hasPageCardNavListener) {
+    window._hasPageCardNavListener = true;
+    window.addEventListener('keydown', handlePageKeyDown);
+    document.addEventListener('click', function (e) {
+      var card = e.target.closest('.md-typeset .grid.cards > ul > li, .md-typeset .grid.cards > ol > li');
+      if (card) {
+        var cards = getPageCards();
+        var idx = cards.indexOf(card);
+        if (idx !== -1) {
+          setActiveCard(cards, idx);
+        }
+      }
+    });
+  }
 
   // ========================================================
   // STRICT CURATED CARDS SEARCH DATASET (65 Resources)
