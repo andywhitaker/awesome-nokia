@@ -14,6 +14,7 @@
 - [Antimony](https://antimony-team.github.io/antimony/) - Alternative GUI and lab manager focused on educational environments created at the Eastern Switzerland University of Applied Sciences ([Git Repo](https://github.com/antimony-team/antimony)).
 - [vrnetlab](https://containerlab.dev/manual/vrnetlab/) - Tool to convert VM-based network device images into Containerlab-compatible containers ([Git Repo](https://github.com/srl-labs/vrnetlab)).
 - [Clabernetes](https://c9s.run/) - Containerlab in kubernetes allowing larger scale-out labs.
+- [WSL Containerlab](https://containerlab.dev/windows/#wsl-containerlab) - Ready-to-use Windows Subsystem for Linux (WSL2) distribution that makes network labbing with Containerlab and Docker seamless on Windows 10 and 11 ([Git Repo](https://github.com/srl-labs/wsl-containerlab)).
 - [Discord Community](https://discord.gg/vAyddtaEV9) - Official Containerlab community chat.
 
 ## 🐧 SR Linux
@@ -30,6 +31,8 @@
 - [Nokia SR Skills](https://github.com/antoinekh/nokia-sr-skills/) - Claude Skill plugin teaching agents how to inspect and operate Nokia SR Linux and SROS models and devices.
 - [SR Linux YANG models](https://github.com/nokia/srlinux-yang-models) - Nokia SR Linux YANG models.
 - [NAPALM SR Linux](https://napalm.srlinux.dev) - Community NAPALM driver for SR Linux ([Git Repo](https://github.com/napalm-automation-community/napalm-srlinux)).
+- [SR Linux NDK](https://learn.srlinux.dev/ndk/) - Official development framework and SDKs for programming high-performance, on-box custom C++, Go, and Python agents and CLI plugins on Nokia SR Linux.
+- [fcli](https://github.com/srl-labs/fcli) - Fabric observability tool for Nokia SR Linux fabrics providing a real-time web UI, terminal CLI reports, and an MCP server for AI coding assistants over gNMI.
 - [Discord Community](https://discord.gg/tZvgjQ6PZf) - Official SR Linux and SROS community chat.
 
 ## ☁️ EDA (Event-Driven Automation)
@@ -72,6 +75,7 @@
 - [ProtoMap](https://protomap.netdevops.me) - Visualizer for gNMI, gNOI, gNSI, and gRIBI service specifications.
 - [gNMIc](https://gnmic.openconfig.net/) - Open source gNMI client by Nokia ([Git Repo](https://github.com/openconfig/gnmic)).
 - [gNMIc Operator](https://operator.gnmic.dev/) - Deploy and manage gNMIc telemetry collectors on Kubernetes ([Git Repo](https://github.com/gnmic/operator)).
+- [RAVEN](https://ritmukhe.github.io/raven-docs/) - Single-binary BGP routing security observability tool by Nokia that connects to routers via BMP, validates routes against RPKI ROV and ASPA in real time, and exports metrics ([Git Repo](https://github.com/nokia/bgp-routing-security-monitor)).
 - [NETCONF VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Nokia.netconf-client) - NETCONF client for VS Code ([Git Repo](https://github.com/nokia/vscode-netconf)).
 - [Netlab](https://netlab.tools/) - Multi-Vendor Network labbing software with support for SR Linux and SROS featuring auto-configuration of interfaces and protocols ([Git Repo](https://github.com/ipspace/netlab)).
 - [Robot Framework](https://robotframework.org/) - Open source automation framework for test and robotic process automation (RPA) started by Nokia ([Git Repo](https://github.com/robotframework/robotframework)).

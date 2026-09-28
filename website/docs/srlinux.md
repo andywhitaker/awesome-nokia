@@ -10,7 +10,7 @@ hide:
 <div class="subpage-header">
   <div class="hero-curated-badge">
     <span class="pulse-dot"></span>
-    <span>14 Curated Tools</span>
+    <span>16 Curated Tools</span>
   </div>
 </div>
 
@@ -99,6 +99,18 @@ hide:
     Community-maintained NAPALM network automation driver for SR Linux devices.
 
     <span class="card-tag-group">`#napalm` `#python` `#automation`</span> <span class="card-btn-group">[Visit ↗](https://napalm.srlinux.dev){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/napalm-automation-community/napalm-srlinux){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+
+-   ### [SR Linux NDK](https://learn.srlinux.dev/ndk/){: target="_blank" rel="noopener noreferrer" } {: #srl-ndk }
+
+    Official development framework and SDKs for programming high-performance, on-box custom C++, Go, and Python agents and CLI plugins on Nokia SR Linux.
+
+    <span class="card-tag-group">`#ndk` `#sdk` `#srlinux`</span> <span class="card-btn-group">[Visit ↗](https://learn.srlinux.dev/ndk/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
+
+-   ### [fcli](https://github.com/srl-labs/fcli){: target="_blank" rel="noopener noreferrer" } {: #srl-fcli }
+
+    Fabric observability tool for Nokia SR Linux fabrics, providing a real-time web UI, terminal CLI reports, and an MCP server for AI coding assistants over gNMI.
+
+    <span class="card-tag-group">`#observability` `#gnmi` `#srlinux`</span> <span class="card-btn-group">[Repo ↗](https://github.com/srl-labs/fcli){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [SR Linux Discord Community](https://discord.gg/tZvgjQ6PZf){: target="_blank" rel="noopener noreferrer" } {: #srl-discord }
 

@@ -10,7 +10,7 @@ hide:
 <div class="subpage-header">
   <div class="hero-curated-badge">
     <span class="pulse-dot"></span>
-    <span>11 Curated Tools</span>
+    <span>12 Curated Tools</span>
   </div>
 </div>
 
@@ -51,6 +51,12 @@ hide:
     Kubernetes operator to deploy, scale, and manage gNMIc telemetry collector clusters dynamically.
 
     <span class="card-tag-group">`#kubernetes` `#gnmi` `#operator`</span> <span class="card-btn-group">[Visit ↗](https://operator.gnmic.dev/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/gnmic/operator){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+
+-   ### [RAVEN](https://ritmukhe.github.io/raven-docs/){: target="_blank" rel="noopener noreferrer" } {: #gen-raven }
+
+    Single-binary BGP routing security observability tool by Nokia that connects to routers via BMP, validates routes against RPKI ROV and ASPA in real time, and exports metrics.
+
+    <span class="card-tag-group">`#bgp` `#security` `#rpki`</span> <span class="card-btn-group">[Visit ↗](https://ritmukhe.github.io/raven-docs/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/nokia/bgp-routing-security-monitor){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [NETCONF VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Nokia.netconf-client){: target="_blank" rel="noopener noreferrer" } {: #gen-netconf-vscode }
 

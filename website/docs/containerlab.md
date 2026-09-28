@@ -10,7 +10,7 @@ hide:
 <div class="subpage-header">
   <div class="hero-curated-badge">
     <span class="pulse-dot"></span>
-    <span>6 Curated Tools</span>
+    <span>7 Curated Tools</span>
   </div>
 </div>
 
@@ -51,6 +51,12 @@ hide:
     Containerlab in Kubernetes allowing distributed, scale-out network labs.
 
     <span class="card-tag-group">`#kubernetes` `#cloud` `#lab`</span> <span class="card-btn-group">[Visit ↗](https://c9s.run/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/srl-labs/clabernetes){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+
+-   ### [WSL Containerlab](https://containerlab.dev/windows/#wsl-containerlab){: target="_blank" rel="noopener noreferrer" } {: #clab-wsl }
+
+    Ready-to-use Windows Subsystem for Linux (WSL2) distribution that makes network labbing with Containerlab and Docker seamless on Windows 10 and 11.
+
+    <span class="card-tag-group">`#containerlab` `#wsl` `#windows`</span> <span class="card-btn-group">[Visit ↗](https://containerlab.dev/windows/#wsl-containerlab){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/srl-labs/wsl-containerlab){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [Containerlab Discord](https://discord.gg/vAyddtaEV9){: target="_blank" rel="noopener noreferrer" } {: #clab-discord }
 
