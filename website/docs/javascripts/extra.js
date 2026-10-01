@@ -300,7 +300,7 @@
   }
 
   // ========================================================
-  // STRICT CURATED CARDS SEARCH DATASET (65 Resources)
+  // STRICT CURATED CARDS SEARCH DATASET (66 Resources)
   // ========================================================
   var CURATED_CARDS = [
   {
@@ -342,6 +342,19 @@
       "#lab",
       "#education",
       "#community"
+    ]
+  },
+  {
+    "id": "clab-boxen",
+    "title": "Boxen",
+    "cat": "Containerlab",
+    "href": "containerlab/#clab-boxen",
+    "desc": "Boxen turns a network OS virtual machine into a portable container image.",
+    "tags": [
+      "#containers",
+      "#lab",
+      "#vm",
+      "#containerlab"
     ]
   },
   {
@@ -1596,7 +1609,7 @@
         );
       }).join('');
     } else {
-      // STRICT CARD SEARCH (Only matching 65 curated cards)
+      // STRICT CARD SEARCH (Only matching 66 curated cards)
       var matches = searchCuratedCards(rawQ);
       if (matches.length === 0) {
         header.innerHTML = '<span>NO CURATED RESULTS</span><span>0 MATCHES</span>';

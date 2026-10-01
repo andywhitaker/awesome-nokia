@@ -10,7 +10,7 @@ hide:
 <div class="subpage-header">
   <div class="hero-curated-badge">
     <span class="pulse-dot"></span>
-    <span>7 Curated Tools</span>
+    <span>8 Curated Tools</span>
   </div>
 </div>
 
@@ -39,6 +39,12 @@ hide:
     Alternative GUI and lab manager focused on educational environments created at Eastern Switzerland University of Applied Sciences.
 
     <span class="card-tag-group">`#gui` `#lab` `#education`</span> <span class="card-btn-group">[Visit ↗](https://antimony-team.github.io/antimony/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/antimony-team/antimony){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+
+-   ### [Boxen](https://boxen.containerlab.dev){: target="_blank" rel="noopener noreferrer" } {: #clab-boxen }
+
+    Boxen turns a network OS virtual machine into a portable container image.
+
+    <span class="card-tag-group">`#containers` `#lab` `#vm`</span> <span class="card-btn-group">[Visit ↗](https://boxen.containerlab.dev){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/carlmontanari/boxen){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [vrnetlab](https://containerlab.dev/manual/vrnetlab/){: target="_blank" rel="noopener noreferrer" } {: #vrnetlab }
 

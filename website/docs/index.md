@@ -10,7 +10,7 @@ hide:
 <div class="hero-container">
   <div class="hero-curated-badge">
     <span class="pulse-dot"></span>
-    <span>65 Curated Resources</span>
+    <span>66 Curated Resources</span>
   </div>
   <h1 class="hero-title hero-title--full-gradient"><span class="hero-title-awesome">Awesome</span> <span class="hero-title-nokia">Nokia</span></h1>
   <p class="hero-subtitle">
@@ -30,7 +30,7 @@ Select a platform below or use the top navigation tabs to browse curated project
 
     Open-source orchestrator for container-based network labs
 
-    <span class="ecosystem-counter">7 Curated Tools</span> [Browse Tools →](containerlab.md){: .ecosystem-btn }
+    <span class="ecosystem-counter">8 Curated Tools</span> [Browse Tools →](containerlab.md){: .ecosystem-btn }
 
 -   ### [SR Linux](srlinux.md)
 

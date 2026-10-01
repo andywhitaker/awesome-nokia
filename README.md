@@ -12,6 +12,7 @@
 - [Containerlab](https://containerlab.dev) - Open-source virtual network lab orchestrator.
 - [Containerlab GUI](https://containerlab.dev/manual/gui/) - GUI for Containerlab available as a VS Code extension, desktop app, self-hosted web app, or in a public browser sandbox ([Git Repo](https://github.com/srl-labs/containerlab-app)).
 - [Antimony](https://antimony-team.github.io/antimony/) - Alternative GUI and lab manager focused on educational environments created at the Eastern Switzerland University of Applied Sciences ([Git Repo](https://github.com/antimony-team/antimony)).
+- [Boxen](https://boxen.containerlab.dev) - Boxen turns a network OS virtual machine into a portable container image ([Git Repo](https://github.com/carlmontanari/boxen)).
 - [vrnetlab](https://containerlab.dev/manual/vrnetlab/) - Tool to convert VM-based network device images into Containerlab-compatible containers ([Git Repo](https://github.com/srl-labs/vrnetlab)).
 - [Clabernetes](https://c9s.run/) - Containerlab in kubernetes allowing larger scale-out labs.
 - [WSL Containerlab](https://containerlab.dev/windows/#wsl-containerlab) - Ready-to-use Windows Subsystem for Linux (WSL2) distribution that makes network labbing with Containerlab and Docker seamless on Windows 10 and 11 ([Git Repo](https://github.com/srl-labs/wsl-containerlab)).
