@@ -706,6 +706,19 @@
     ]
   },
   {
+    "id": "eda-resource-browser-official",
+    "title": "Nokia EDA Resource Browser",
+    "cat": "EDA",
+    "href": "eda/#eda-resource-browser-official",
+    "desc": "Official web-based custom resource definition (CRD) browser maintained directly by Nokia EDA team.",
+    "tags": [
+      "#eda",
+      "#crd",
+      "#browser",
+      "#official"
+    ]
+  },
+  {
     "id": "eda-image-manager",
     "title": "EDA Image Manager",
     "cat": "EDA",
@@ -717,19 +730,6 @@
       "#firmware",
       "#lab",
       "#community"
-    ]
-  },
-  {
-    "id": "eda-resource-browser-official",
-    "title": "Nokia EDA Resource Browser",
-    "cat": "EDA",
-    "href": "eda/#eda-resource-browser-official",
-    "desc": "Official web-based custom resource definition (CRD) browser maintained directly by Nokia EDA team.",
-    "tags": [
-      "#eda",
-      "#crd",
-      "#browser",
-      "#official"
     ]
   },
   {

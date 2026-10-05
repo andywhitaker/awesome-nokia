@@ -22,6 +22,7 @@ extra_css = ["stylesheets/extra.css"]
 extra_javascript = ["javascripts/extra.js"]
 
 [project.theme]
+custom_dir = "overrides"
 language = "en"
 features = [
   "announce.dismiss",

@@ -58,17 +58,17 @@ hide:
 
     <span class="card-tag-group">`#eda` `#crd` `#browser`</span> <span class="card-btn-group">[Visit ↗](https://eda-resource-browser.pages.dev/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/fullstopdev/resource-browser){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
 
--   ### [EDA Image Manager](https://github.com/kkayhan/edaapp_ImageManager){: target="_blank" rel="noopener noreferrer" } {: #eda-image-manager }
-
-    Simplify managing switch and node firmware images when operating EDA in lab and test environments.
-
-    <span class="card-tag-group">`#eda` `#images` `#firmware`</span> <span class="card-btn-group">[Repo ↗](https://github.com/kkayhan/edaapp_ImageManager){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
-
 -   ### [Nokia EDA Resource Browser](https://crd.eda.dev/){: target="_blank" rel="noopener noreferrer" } {: #eda-resource-browser-official }
 
     Official web-based custom resource definition (CRD) browser maintained directly by Nokia EDA team.
 
     <span class="card-tag-group">`#eda` `#crd` `#browser`</span> <span class="card-btn-group">[Visit ↗](https://crd.eda.dev/){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" } [Repo ↗](https://github.com/eda-labs/resource-browser){: .card-btn target="_blank" rel="noopener noreferrer" }</span>
+
+-   ### [EDA Image Manager](https://github.com/kkayhan/edaapp_ImageManager){: target="_blank" rel="noopener noreferrer" } {: #eda-image-manager }
+
+    Simplify managing switch and node firmware images when operating EDA in lab and test environments.
+
+    <span class="card-tag-group">`#eda` `#images` `#firmware`</span> <span class="card-btn-group">[Repo ↗](https://github.com/kkayhan/edaapp_ImageManager){: .card-btn .card-btn-primary target="_blank" rel="noopener noreferrer" }</span>
 
 -   ### [Pydantic Models for EDA](https://github.com/eda-labs/pydantic-eda){: target="_blank" rel="noopener noreferrer" } {: #eda-pydantic }
 

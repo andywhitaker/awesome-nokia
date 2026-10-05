@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block htmltitle %}
+  {% if not page.url %}
+    <title>{{ config.site_name }}</title>
+  {% else %}
+    <title>{{ page.title }} - {{ config.site_name }}</title>
+  {% endif %}
+{% endblock %}
+
+{% block site_meta %}
+  {{ super() }}
+  {% if not page.url %}
+    <meta property="og:title" content="{{ config.site_name }}">
+  {% else %}
+    <meta property="og:title" content="{{ page.title }} - {{ config.site_name }}">
+  {% endif %}
+  {% if page.meta and page.meta.description %}
+    <meta property="og:description" content="{{ page.meta.description }}">
+  {% elif config.site_description %}
+    <meta property="og:description" content="{{ config.site_description }}">
+  {% endif %}
+  <meta property="og:type" content="website">
+{% endblock %}
